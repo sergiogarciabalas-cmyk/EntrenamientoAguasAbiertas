@@ -26,13 +26,18 @@ export const Contact = () => {
                 }
             });
 
-            if (response.ok) {
+            const json = await response.json().catch(() => null);
+            console.log("Formspree response:", response.status, json);
+
+            if (response.ok && (!json || json.ok)) {
                 setIsSuccess(true);
                 form.reset();
             } else {
-                const data = await response.json().catch(() => null);
-                console.error("Formspree error:", response.status, data);
-                setErrorMessage("No se ha podido enviar el mensaje. Inténtalo de nuevo en unos minutos.");
+                const message =
+                    (json && (json.error || (Array.isArray(json.errors) && json.errors[0]?.message))) ||
+                    "No se ha podido enviar el mensaje. Inténtalo de nuevo en unos minutos.";
+                console.error("Formspree error:", response.status, json);
+                setErrorMessage(message);
             }
         } catch (error) {
             console.error(error);

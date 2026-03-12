@@ -5,12 +5,14 @@ import { RevealOnScroll } from '../components/RevealOnScroll';
 export const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const FORMSPREE_URL = "https://formspree.io/f/xvzwrzeb";
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setErrorMessage(null);
 
         const form = e.currentTarget;
         const data = new FormData(form);
@@ -28,14 +30,13 @@ export const Contact = () => {
                 setIsSuccess(true);
                 form.reset();
             } else {
-                // Fallback for demo purposes if formspree URL is not set
-                console.warn("Formspree URL is not configured. Simulating success.");
-                setTimeout(() => setIsSuccess(true), 1000);
+                const data = await response.json().catch(() => null);
+                console.error("Formspree error:", response.status, data);
+                setErrorMessage("No se ha podido enviar el mensaje. Inténtalo de nuevo en unos minutos.");
             }
         } catch (error) {
             console.error(error);
-            // Fallback
-            setTimeout(() => setIsSuccess(true), 1000);
+            setErrorMessage("Ha ocurrido un error al enviar el mensaje. Revisa tu conexión e inténtalo de nuevo.");
         } finally {
             setIsSubmitting(false);
         }
@@ -178,7 +179,13 @@ export const Contact = () => {
 
                                     </div>
 
-                                    <button type="submit" className="btn btn-primary" disabled={isSubmitting} style={{ width: '100%', display: 'flex', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1 }}>
+                                    {errorMessage && (
+                                        <p style={{ color: '#f97373', fontSize: '0.9rem', margin: 0 }}>
+                                            {errorMessage}
+                                        </p>
+                                    )}
+
+                                    <button type="submit" className="btn btn-primary" disabled={isSubmitting} style={{ width: '100%', display: 'flex', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1, marginTop: '0.5rem' }}>
                                         {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
                                     </button>
                                 </form>

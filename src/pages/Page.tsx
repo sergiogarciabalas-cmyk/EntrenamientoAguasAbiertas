@@ -100,10 +100,15 @@ export const Page = ({ fixedSlug }: { fixedSlug?: string }) => {
         title,
         content
       }
-    `, { slug }).then((data) => {
-            setPageData(data);
-            setLoading(false);
-        }).catch(console.error);
+    `, { slug })
+            .then((data) => {
+                setPageData(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error(error);
+                setLoading(false);
+            });
     }, [slug]);
 
     if (loading) {

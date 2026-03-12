@@ -117,10 +117,15 @@ export const ServiceDetail = ({ fixedSlug }: { fixedSlug?: string }) => {
     useEffect(() => {
         client.fetch(`
       *[_type in ["service", "page"] && slug.current == $slug][0]
-    `, { slug }).then((data) => {
-            setService(data);
-            setLoading(false);
-        }).catch(console.error);
+    `, { slug })
+            .then((data) => {
+                setService(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error(error);
+                setLoading(false);
+            });
     }, [slug]);
 
     if (loading) {

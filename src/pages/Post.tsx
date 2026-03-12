@@ -88,10 +88,15 @@ export const Post = () => {
         publishedAt,
         body
       }
-    `, { slug }).then((data) => {
-            setPostData(data);
-            setLoading(false);
-        }).catch(console.error);
+    `, { slug })
+            .then((data) => {
+                setPostData(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error(error);
+                setLoading(false);
+            });
     }, [slug]);
 
     if (loading) {

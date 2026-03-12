@@ -148,7 +148,7 @@ export const ServiceDetail = ({ fixedSlug }: { fixedSlug?: string }) => {
             <div style={{ background: 'var(--color-background-elevated)', padding: '4rem 0', marginBottom: '3rem' }}>
                 <div className="container" style={{ maxWidth: '800px' }}>
                     <RevealOnScroll>
-                        <Link to="/#servicios" className="nav-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
+                        <Link to="/servicios" className="nav-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
                             <ArrowLeft size={16} /> Volver a Servicios
                         </Link>
 

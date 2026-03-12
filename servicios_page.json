@@ -1,0 +1,521 @@
+{
+  "_createdAt": "2026-02-28T17:17:26Z",
+  "_id": "wp-page-387",
+  "_rev": "Fyr4jHz0x14qAlvAFbxgl8",
+  "_type": "page",
+  "_updatedAt": "2026-03-01T16:09:46Z",
+  "content": [
+    {
+      "_key": "c2a2f32b2230",
+      "_type": "htmlBlock",
+      "html": "<img fetchpriority=\"high\" decoding=\"async\" width=\"1024\" height=\"430\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/d4a87fc141d908000f0881e86ec703eb0fc0f354-1024x430.png\" class=\"attachment-large size-large wp-image-2925\" alt=\"Plan entrenamiento online\" sizes=\"(max-width: 1024px) 100vw, 1024px\">"
+    },
+    {
+      "_key": "eb24ac6be271",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eb24ac6be2710",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "923138373d5c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "923138373d5c0",
+          "_type": "span",
+          "marks": [],
+          "text": "¿Empezamos a entrenar?"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ac63292a2ca6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ac63292a2ca60",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "413ef838bf19",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "413ef838bf190",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "089506db6e94",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "089506db6e940",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b39c576ea053",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b39c576ea0530",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "898d60d4e127",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "898d60d4e1270",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f14cb52619e6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f14cb52619e60",
+          "_type": "span",
+          "marks": [],
+          "text": "En la siguiente tabla encontrarás los diferentes servicios que puedes solicitar con "
+        },
+        {
+          "_key": "f14cb52619e61",
+          "_type": "span",
+          "marks": [
+            "057defb01315",
+            "strong"
+          ],
+          "text": "Sergi Swim Coach"
+        },
+        {
+          "_key": "f14cb52619e62",
+          "_type": "span",
+          "marks": [],
+          "text": ". Navega por los enlaces de la tabla y escoge la opción que mejor se adapte a tus necesidades."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "057defb01315",
+          "_type": "link",
+          "href": "/about-us/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "de9ef799085b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de9ef799085b0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "acd4d3d1f038",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "acd4d3d1f0380",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "375ce9e174fe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "375ce9e174fe0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4f5063f526c6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4f5063f526c60",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f88096b2c8d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8f88096b2c8d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "18c92497a08e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18c92497a08e0",
+          "_type": "span",
+          "marks": [],
+          "text": "Tabla de Servicios"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d9e58aa14677",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d9e58aa146770",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e2182a956321",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e2182a9563210",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ef60f10e1245",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ef60f10e12450",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bf8efee63c04",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bf8efee63c040",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "08ec6bb227b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "08ec6bb227b60",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0e34da16740a",
+      "_type": "htmlBlock",
+      "html": "<table style=\"border-collapse: collapse; width: 100%; height: 367px;\"> <tbody> <tr style=\"height: 23px;\"> <td style=\"width: 25%; height: 23px; text-align: center;\"> <h3><strong>SERVICIO</strong></h3> </td> <td style=\"width: 25%; height: 23px; text-align: center;\"> <h3><strong>OPCIÓN 1</strong></h3> </td> <td style=\"width: 25%; height: 23px; text-align: center;\"> <h3><strong>OPCIÓN 2</strong></h3> </td> <td style=\"width: 25%; height: 23px; text-align: center;\"> <h3><strong>OPCIÓN 3</strong></h3> </td> </tr> <tr style=\"height: 63px;\"> <td style=\"width: 25%; height: 63px; text-align: center;\"><strong><a href=\"/plan-entrenamiento-online-o-mixto/\" target=\"_blank\" rel=\"noopener noreferrer\" data-rich-text-format-boundary=\"true\">Planes de entrenamiento individualizados</a></strong></td> <td style=\"width: 25%; height: 63px; text-align: center;\">Online: 60€</td> <td style=\"width: 25%; height: 63px; text-align: center;\">Mixto: 90€</td> <td style=\"width: 25%; height: 63px; text-align: center;\">A medida (a consultar)</td> </tr> <tr style=\"height: 63px;\"> <td style=\"width: 25%; height: 63px; text-align: center;\"><strong><a href=\"/planes-entrenamiento-en-grupo/\" target=\"_blank\" rel=\"noopener noreferrer\" data-rich-text-format-boundary=\"true\">Planes de entrenamiento en grupo</a></strong></td> <td style=\"width: 25%; height: 63px; text-align: center;\">5 a 10 pers: 50€</td> <td style=\"width: 25%; height: 63px; text-align: center;\">11 a 20 pers: 40€</td> <td style=\"width: 25%; height: 63px; text-align: center;\">21 o más pers: 35€</td> </tr> <tr style=\"height: 43px;\"> <td style=\"width: 25%; height: 43px; text-align: center;\"><strong><a href=\"/clases-presenciales/\" target=\"_blank\" rel=\"noopener noreferrer\" data-rich-text-format-boundary=\"true\">Clases presenciales</a></strong></td> <td style=\"width: 25%; height: 43px; text-align: center;\">Indiv: 60€ (tráete un acompañante)</td> <td style=\"width: 25%; height: 43px; text-align: center;\">5 a 10 pers: 25€</td> <td style=\"width: 25%; height: 43px; text-align: center;\">11 o más pers: 20€</td> </tr> <tr style=\"height: 23px;\"> <td style=\"width: 25%; height: 23px; text-align: center;\"><a href=\"/informe-tecnico-y-antropometria/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Informe técnico</strong></a></td> <td style=\"height: 23px; text-align: center;\" colspan=\"3\">60€</td> </tr> <tr style=\"height: 23px;\"> <td style=\"width: 25%; text-align: center; height: 23px;\"><a href=\"/informe-tecnico-y-antropometria/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Antropometría</strong></a></td> <td style=\"width: 25%; text-align: center; height: 23px;\" colspan=\"3\">60€</td> </tr> <tr style=\"height: 23px;\"> <td style=\"width: 25%; height: 23px; text-align: center;\"><strong><a href=\"/webinars/\" target=\"_blank\" rel=\"noopener noreferrer\" data-rich-text-format-boundary=\"true\">Plan entrenamiento de fuerza</a></strong></td> <td style=\"width: 25%; height: 23px; text-align: center;\" colspan=\"3\">30€</td> </tr> <tr style=\"height: 43px;\"> <td style=\"width: 25%; height: 43px; text-align: center;\"><strong><a href=\"/clinics-presenciales/\" target=\"_blank\" rel=\"noopener noreferrer\" data-rich-text-format-boundary=\"true\">Clínic presencial</a></strong></td> <td style=\"width: 25%; height: 43px; text-align: center;\" colspan=\"3\">A consultar</td> </tr> <tr style=\"height: 63px;\"> <td style=\"width: 25%; height: 63px; text-align: center;\"><strong><a href=\"/asesoramiento-entrenamiento/\" target=\"_blank\" rel=\"noopener noreferrer\" data-rich-text-format-boundary=\"true\">Asesoramiento sobre entrenamiento</a></strong></td> <td style=\"width: 25%; height: 63px; text-align: center;\">Videoconf: 60€/hora</td> <td style=\"width: 25%; height: 63px; text-align: center;\">Presencial: 100€/hora</td> <td style=\"width: 25%; height: 63px; text-align: center;\">Clínics: a consultar</td> </tr> </tbody> </table>"
+    },
+    {
+      "_key": "4b43d55bca62",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4b43d55bca620",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2b8c446885de",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2b8c446885de0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9b3ba9d251e8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9b3ba9d251e80",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "66c0d45a0708",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "66c0d45a07080",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1e59015e80c7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1e59015e80c70",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f09a5888c28f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f09a5888c28f0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "d6f19060a996",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6f19060a9960",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d618bc6c45b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d618bc6c45b30",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c2e6f3cf4fc7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c2e6f3cf4fc70",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "75c373ea736d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "75c373ea736d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3dfd53aefd7f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3dfd53aefd7f0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d32e7f50c7d2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d32e7f50c7d20",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c296f6349d25",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c296f6349d250",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d7d7d309b55f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d7d7d309b55f0",
+          "_type": "span",
+          "marks": [],
+          "text": "Para cualquier consulta ves a la zona de "
+        },
+        {
+          "_key": "d7d7d309b55f1",
+          "_type": "span",
+          "marks": [
+            "strong",
+            "58ed55e89846"
+          ],
+          "text": "Contacto"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "58ed55e89846",
+          "_type": "link",
+          "href": "/contact-us/"
+        }
+      ],
+      "style": "h2"
+    }
+  ],
+  "slug": {
+    "current": "servicios-sergi-swim-coach"
+  },
+  "title": "Servicios"
+}

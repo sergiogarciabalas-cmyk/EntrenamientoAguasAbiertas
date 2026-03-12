@@ -1,0 +1,437 @@
+{
+  "_createdAt": "2026-02-28T18:00:45Z",
+  "_id": "wp-page-142",
+  "_rev": "Fyr4jHz0x14qAlvAFbxppm",
+  "_type": "page",
+  "_updatedAt": "2026-03-01T16:10:10Z",
+  "content": [
+    {
+      "_key": "ba09dd2f20fe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ba09dd2f20fe0",
+          "_type": "span",
+          "marks": [],
+          "text": "30€/mes"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7e054ba9a56d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7e054ba9a56d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "55d13caf0893",
+      "_type": "htmlBlock",
+      "html": "<img decoding=\"async\" width=\"1024\" height=\"576\" class=\"attachment-large size-large wp-image-2681 lazyload\" alt=\"Entrenamiento de fuerza\" data-sizes=\"(max-width: 1024px) 100vw, 1024px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/54aa1a29bcab22588fece4baf1c18dd021b9cca4-1024x576.webp\" style=\"--smush-placeholder-width: 1024px; --smush-placeholder-aspect-ratio: 1024/576;\">"
+    },
+    {
+      "_key": "0ca3795ae2ec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0ca3795ae2ec0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7a2f5c31aaff",
+      "_type": "htmlBlock",
+      "html": "<img decoding=\"async\" width=\"480\" height=\"369\" class=\"attachment-large size-large wp-image-2682 lazyload\" alt=\"entrenamiento de fuerza\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/24c78110c781084495064e783afab9bb3adfe71f-480x369.gif\" style=\"--smush-placeholder-width: 480px; --smush-placeholder-aspect-ratio: 480/369;\">"
+    },
+    {
+      "_key": "0bcdb8bfe4fa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0bcdb8bfe4fa0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "915ce25697a2",
+      "_type": "htmlBlock",
+      "html": "<img decoding=\"async\" width=\"450\" height=\"300\" class=\"attachment-large size-large wp-image-2683 lazyload\" alt=\"entrenamiento fuerza aguas abiertas\" data-sizes=\"(max-width: 450px) 100vw, 450px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/11a6dbff46914c594c8ed82532535642554625d7-450x300.jpg\" style=\"--smush-placeholder-width: 450px; --smush-placeholder-aspect-ratio: 450/300;\">"
+    },
+    {
+      "_key": "21d4561386b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21d4561386b60",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c1d4a5e8c284",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c1d4a5e8c2840",
+          "_type": "span",
+          "marks": [],
+          "text": "Puedes completar tu plan de entrenamiento en agua con un plan de entrenamiento de fuerza en seco."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "240f1330c1d3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "240f1330c1d30",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "960990fc237a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "960990fc237a0",
+          "_type": "span",
+          "marks": [],
+          "text": "El trabajo de fuerza tiene una gran incidencia en tu rendimiento y en tu evolución dentro del agua para rendir en carreras y travesías de aguas abiertas. El trabajo de fuerza en seco tiene diferentes orientaciones, tales como:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c858b91972b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c858b91972b30",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9171fa79fd1b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9171fa79fd1b0",
+          "_type": "span",
+          "marks": [],
+          "text": "Prevención de lesiones."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9294ffb96ee2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9294ffb96ee20",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f22b581384a6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f22b581384a60",
+          "_type": "span",
+          "marks": [],
+          "text": "Condición física general."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e08a0a33892a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e08a0a33892a0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8cc2457d668f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8cc2457d668f0",
+          "_type": "span",
+          "marks": [],
+          "text": "Composición corporal."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7323566a183a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7323566a183a0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c008c88fa0b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c008c88fa0b50",
+          "_type": "span",
+          "marks": [],
+          "text": "Coordinación y fuerza del «core».\n"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d4806b30fc4d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4806b30fc4d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f6ec06cb7753",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f6ec06cb77530",
+          "_type": "span",
+          "marks": [],
+          "text": "Fuerza máxima."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "724f67928023",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "724f679280230",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "806ac893a2a3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "806ac893a2a30",
+          "_type": "span",
+          "marks": [],
+          "text": "Fuerza resistencia."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fb23c14d91aa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fb23c14d91aa0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a58d86d45164",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a58d86d451640",
+          "_type": "span",
+          "marks": [],
+          "text": "Fuerza útil."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4ac50a6dfff6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ac50a6dfff60",
+          "_type": "span",
+          "marks": [],
+          "text": "Una vez analice tu estado actual y tus objetivos, decidiremos cómo plantear el trabajo de fuerza en seco."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3db5b005eb42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3db5b005eb420",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "50d14ca4e659",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "50d14ca4e6590",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2ba23fe4c06e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2ba23fe4c06e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d4437f79659b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4437f79659b0",
+          "_type": "span",
+          "marks": [],
+          "text": "Solicita tu Plan de entrenamiento en la zona de "
+        },
+        {
+          "_key": "d4437f79659b1",
+          "_type": "span",
+          "marks": [
+            "strong",
+            "365c7e70304e"
+          ],
+          "text": "Contacto"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "365c7e70304e",
+          "_type": "link",
+          "href": "/contact-us/"
+        }
+      ],
+      "style": "h2"
+    }
+  ],
+  "slug": {
+    "current": "webinars"
+  },
+  "title": "Plan entrenamiento de fuerza"
+}

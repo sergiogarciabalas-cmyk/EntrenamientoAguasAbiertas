@@ -1,0 +1,20 @@
+[
+  {
+    "_createdAt": "2026-02-28T15:24:45Z",
+    "_id": "8c19d38d-4d03-4a70-8512-5d15b36b20b8",
+    "_rev": "V9Ovue4SNYTqkbYze0h4sE",
+    "_system": {
+      "base": {
+        "id": "8c19d38d-4d03-4a70-8512-5d15b36b20b8",
+        "rev": "V9Ovue4SNYTqkbYze0gLdj"
+      }
+    },
+    "_type": "testimonial",
+    "_updatedAt": "2026-02-28T15:35:35Z",
+    "authorDetails": "Ingeniero",
+    "authorInitials": "MS",
+    "authorName": "Miguel",
+    "image": null,
+    "quote": "Gracias a Sergi entendí qué es entrenar y como plantear una temporada de natación y aguas abiertas. Con Sergi aprendes de todo y su profesionalidad, cercanía y simpatía te hacen sentir cómodo y te llevan tu mejor nivel. Muchas gracias por todo Sergi. Seguimos!!!"
+  }
+]

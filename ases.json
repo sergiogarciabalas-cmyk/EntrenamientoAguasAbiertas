@@ -1,0 +1,954 @@
+{
+  "_createdAt": "2026-02-28T17:17:29Z",
+  "_id": "wp-page-146",
+  "_rev": "V9Ovue4SNYTqkbYze2bvst",
+  "_type": "page",
+  "_updatedAt": "2026-03-01T16:10:00Z",
+  "content": [
+    {
+      "_key": "eac5f6178833",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eac5f61788330",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Entrevista en streaming o presencial"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "877d745c89af",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "877d745c89af0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1c37f39fc7d9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1c37f39fc7d90",
+          "_type": "span",
+          "marks": [],
+          "text": "Si lo que necesitas es simplemente tener un "
+        },
+        {
+          "_key": "1c37f39fc7d91",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "asesoramiento puntual"
+        },
+        {
+          "_key": "1c37f39fc7d92",
+          "_type": "span",
+          "marks": [],
+          "text": " o solucionar ciertas dudas relacionadas con las aguas abiertas, esta sección te puede venir muy bien. Solicita tu "
+        },
+        {
+          "_key": "1c37f39fc7d93",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "asesoramiento sobre entrenamiento"
+        },
+        {
+          "_key": "1c37f39fc7d94",
+          "_type": "span",
+          "marks": [],
+          "text": " y te ayudaré con tu"
+        },
+        {
+          "_key": "1c37f39fc7d95",
+          "_type": "span",
+          "marks": [
+            "strong",
+            "48e3d78e5e2d"
+          ],
+          "text": "plan"
+        },
+        {
+          "_key": "1c37f39fc7d96",
+          "_type": "span",
+          "marks": [],
+          "text": "."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "48e3d78e5e2d",
+          "_type": "link",
+          "href": "/servicios-sergi-swim-coach/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "017001802df6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "017001802df60",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0a13221c125",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a0a13221c1250",
+          "_type": "span",
+          "marks": [],
+          "text": "En las diferentes entradas al "
+        },
+        {
+          "_key": "a0a13221c1251",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "blog"
+        },
+        {
+          "_key": "a0a13221c1252",
+          "_type": "span",
+          "marks": [],
+          "text": " iré solventando muchas de tus dudas, pero seguro que hay aspectos mas específicos que necesitarán algo más que una simple publicación."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6b4d8571bda1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b4d8571bda10",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44df6585ceb8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44df6585ceb80",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ee9a5159ac85",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ee9a5159ac850",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ba10c55160b4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ba10c55160b40",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "772f12c327db",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "772f12c327db0",
+          "_type": "span",
+          "marks": [],
+          "text": "Ponte en "
+        },
+        {
+          "_key": "772f12c327db1",
+          "_type": "span",
+          "marks": [
+            "6414db1574ad",
+            "strong"
+          ],
+          "text": "Contacto"
+        },
+        {
+          "_key": "772f12c327db2",
+          "_type": "span",
+          "marks": [],
+          "text": " para solicitar la reserva y realizaré una entrevista contigo mediante "
+        },
+        {
+          "_key": "772f12c327db3",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "videoconferencia"
+        },
+        {
+          "_key": "772f12c327db4",
+          "_type": "span",
+          "marks": [],
+          "text": " durante 1 hora. También existe la posibilidad de hacerla "
+        },
+        {
+          "_key": "772f12c327db5",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "presencial"
+        },
+        {
+          "_key": "772f12c327db6",
+          "_type": "span",
+          "marks": [],
+          "text": " en algún punto donde sea cercano para ambos. El "
+        },
+        {
+          "_key": "772f12c327db7",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "asesoramiento sobre entrenamiento"
+        },
+        {
+          "_key": "772f12c327db8",
+          "_type": "span",
+          "marks": [],
+          "text": " será totalmente individualizado y acorde a tus peticiones o consultas. "
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "6414db1574ad",
+          "_type": "link",
+          "href": "/contact-us/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "f37200e10169",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f37200e101690",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "05fda894b74d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "05fda894b74d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b46ee0eeb5e9",
+      "_type": "htmlBlock",
+      "html": "<img decoding=\"async\" width=\"396\" height=\"198\" class=\"attachment-large size-large wp-image-595 lazyload\" alt=\"Asesoramiento entrenamiento aguas abiertas\" data-sizes=\"(max-width: 396px) 100vw, 396px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/fcf0323482fa86118ba713f78faafbdc48a296f3-396x198.png\" style=\"--smush-placeholder-width: 396px; --smush-placeholder-aspect-ratio: 396/198;\">"
+    },
+    {
+      "_key": "c6a722b05695",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c6a722b056950",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1cda72610bd7",
+      "_type": "htmlBlock",
+      "html": "<img decoding=\"async\" width=\"1024\" height=\"576\" class=\"attachment-large size-large wp-image-336 lazyload\" alt=\"asesoria entrenamiento aguas abiertas\" data-sizes=\"(max-width: 1024px) 100vw, 1024px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/13f16a07e195bf6f79ee88ee7e146545beccf813-1024x576.jpg\" style=\"--smush-placeholder-width: 1024px; --smush-placeholder-aspect-ratio: 1024/576;\">"
+    },
+    {
+      "_key": "c2c346e15138",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c2c346e151380",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6290e1fefa29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6290e1fefa290",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "96c625e4d8b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "96c625e4d8b90",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7f4c754d49d9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7f4c754d49d90",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Gratuito para los "
+        },
+        {
+          "_key": "7f4c754d49d91",
+          "_type": "span",
+          "marks": [
+            "strong",
+            "268cb10f5326"
+          ],
+          "text": "clientes"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "268cb10f5326",
+          "_type": "link",
+          "href": "/my-account/"
+        }
+      ],
+      "style": "h3"
+    },
+    {
+      "_key": "67002f0eb9bf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "67002f0eb9bf0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "db2e4d62a23b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "db2e4d62a23b0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0f5ed9f0293d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0f5ed9f0293d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f0adc794e63e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f0adc794e63e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2da0e270f552",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2da0e270f5520",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "87fe60984991",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "87fe609849910",
+          "_type": "span",
+          "marks": [],
+          "text": "Si eres "
+        },
+        {
+          "_key": "87fe609849911",
+          "_type": "span",
+          "marks": [
+            "ed3122cc4d35",
+            "strong"
+          ],
+          "text": "cliente"
+        },
+        {
+          "_key": "87fe609849912",
+          "_type": "span",
+          "marks": [],
+          "text": " de algún plan de entrenamiento mensual, tendremos comunicación continua sobre tu proceso y podrás disfrutar de una videoconferencia mensual de seguimiento "
+        },
+        {
+          "_key": "87fe609849913",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "gratuita."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "ed3122cc4d35",
+          "_type": "link",
+          "href": "/my-account/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "32fc0b83f2ce",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "32fc0b83f2ce0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd529f2af911",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd529f2af9110",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "88fb40ae65e6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "88fb40ae65e60",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "24fa709502f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "24fa709502f90",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Asesoramiento para grupos"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1f3b1ac4a73d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1f3b1ac4a73d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ce2a76e07c3e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ce2a76e07c3e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bda91beb605e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bda91beb605e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "042382e58106",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "042382e581060",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8b2175a5e250",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8b2175a5e2500",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "72acf996d48c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "72acf996d48c0",
+          "_type": "span",
+          "marks": [],
+          "text": "Si lo que necesitas es un asesoramiento para un"
+        },
+        {
+          "_key": "72acf996d48c1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": " grupo,"
+        },
+        {
+          "_key": "72acf996d48c2",
+          "_type": "span",
+          "marks": [],
+          "text": " para una "
+        },
+        {
+          "_key": "72acf996d48c3",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "entidad "
+        },
+        {
+          "_key": "72acf996d48c4",
+          "_type": "span",
+          "marks": [],
+          "text": "o para un "
+        },
+        {
+          "_key": "72acf996d48c5",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "evento"
+        },
+        {
+          "_key": "72acf996d48c6",
+          "_type": "span",
+          "marks": [],
+          "text": ", deberás solicitar un"
+        },
+        {
+          "_key": "72acf996d48c7",
+          "_type": "span",
+          "marks": [
+            "9a6ae39576c1",
+            "strong"
+          ],
+          "text": "Clínic presencial"
+        },
+        {
+          "_key": "72acf996d48c8",
+          "_type": "span",
+          "marks": [],
+          "text": ". Me desplazaré hasta el lugar donde me indiques y disfrutaremos de un buen rato hablando sobre entrenamiento y las aguas abiertas."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "9a6ae39576c1",
+          "_type": "link",
+          "href": "/clinics-presenciales/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "7287c57071bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7287c57071bd0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6d83cd12887b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6d83cd12887b0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2b0c985f6705",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2b0c985f67050",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "67fd8c1ae2de",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "67fd8c1ae2de0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6c246273e177",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6c246273e1770",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "82ba25865a90",
+      "_type": "htmlBlock",
+      "html": "<table style=\"border-collapse: collapse; width: 100%; height: 92px;\"> <tbody> <tr style=\"height: 23px;\"> <td style=\"width: 50%; text-align: center; height: 23px;\"><strong>TIPO DE ASESORAMIENTO</strong></td> <td style=\"width: 50%; text-align: center; height: 23px;\"><strong>PRECIO/hora</strong></td> </tr> <tr style=\"height: 23px;\"> <td style=\"width: 50%; text-align: center; height: 23px;\">Individual Videoconferencia</td> <td style=\"width: 50%; text-align: center; height: 23px;\">60€</td> </tr> <tr style=\"height: 23px;\"> <td style=\"width: 50%; text-align: center; height: 23px;\">Individual Presencial</td> <td style=\"width: 50%; text-align: center; height: 23px;\">100€</td> </tr> <tr style=\"height: 23px;\"> <td style=\"width: 50%; text-align: center; height: 23px;\">Clínic Presencial</td> <td style=\"width: 50%; text-align: center; height: 23px;\">a consultar</td> </tr> </tbody> </table>"
+    },
+    {
+      "_key": "f6fbf8909a51",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f6fbf8909a510",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f4ebaadce0e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f4ebaadce0e30",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec59818b5238",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ec59818b52380",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d0105428bb91",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d0105428bb910",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ece4d9d83813",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ece4d9d838130",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1717da03f98e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1717da03f98e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b0d01e200536",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0d01e2005360",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c03c9c798fb8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c03c9c798fb80",
+          "_type": "span",
+          "marks": [],
+          "text": "Reserva tu asesoramiento en la zona de "
+        },
+        {
+          "_key": "c03c9c798fb81",
+          "_type": "span",
+          "marks": [
+            "strong",
+            "3b6a42426528"
+          ],
+          "text": "Contacto"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "3b6a42426528",
+          "_type": "link",
+          "href": "/contact-us/"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "8e9a5f9c74b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8e9a5f9c74b50",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "97338d9a03e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "97338d9a03e10",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "slug": {
+    "current": "asesoramiento-entrenamiento"
+  },
+  "title": "Asesoramiento sobre entrenamiento"
+}

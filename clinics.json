@@ -1,0 +1,863 @@
+{
+  "_createdAt": "2026-02-28T18:00:44Z",
+  "_id": "wp-page-144",
+  "_rev": "Fyr4jHz0x14qAlvAFbxnba",
+  "_type": "page",
+  "_updatedAt": "2026-03-01T16:10:06Z",
+  "content": [
+    {
+      "_key": "7feb7868212e",
+      "_type": "htmlBlock",
+      "html": "<img decoding=\"async\" width=\"1024\" height=\"768\" class=\"attachment-large size-large wp-image-1827 lazyload\" alt=\"clases presenciales aguas abiertas\" data-sizes=\"(max-width: 1024px) 100vw, 1024px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/860b7699b6d32d85343e0982ca0c15309d25973e-1024x768.jpg\" style=\"--smush-placeholder-width: 1024px; --smush-placeholder-aspect-ratio: 1024/768;\">"
+    },
+    {
+      "_key": "b43629c1d70d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43629c1d70d0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cdd563204c5a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cdd563204c5a0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Clínic día completo (10 horas: entrenamientos + charlas)"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "1898621d74b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1898621d74b00",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "22c436663133",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "22c4366631330",
+          "_type": "span",
+          "marks": [],
+          "text": "Te presento una propuesta de "
+        },
+        {
+          "_key": "22c4366631331",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "día completo"
+        },
+        {
+          "_key": "22c4366631332",
+          "_type": "span",
+          "marks": [],
+          "text": " para pasar juntos "
+        },
+        {
+          "_key": "22c4366631333",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "10 horas"
+        },
+        {
+          "_key": "22c4366631334",
+          "_type": "span",
+          "marks": [],
+          "text": " con los siguientes contenidos. Podemos ajustar la propuesta a los contenidos específicos que me pidas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "740b216ee1dc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "740b216ee1dc0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c29cc4584bab",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c29cc4584bab0",
+          "_type": "span",
+          "marks": [],
+          "text": "2 sesiones de 90 minutos en piscina"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec4155afb34a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ec4155afb34a0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65589d2a9054",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "65589d2a90540",
+          "_type": "span",
+          "marks": [],
+          "text": "2 ponencias de 90 minutos"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8fa67693305a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8fa67693305a0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fbb45147cb28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fbb45147cb280",
+          "_type": "span",
+          "marks": [],
+          "text": "2 sesiones de 30 minutos de calentamiento"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6210b40a7964",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6210b40a79640",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e16ae78d00f2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e16ae78d00f20",
+          "_type": "span",
+          "marks": [],
+          "text": "Preguntas y respuestas"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65b92793e170",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "65b92793e1700",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a7aa0a647be5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7aa0a647be50",
+          "_type": "span",
+          "marks": [],
+          "text": "Coffee break"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7063885d08b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7063885d08b20",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f4ac514ef52",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8f4ac514ef520",
+          "_type": "span",
+          "marks": [],
+          "text": "Comida"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d87dc690f6b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d87dc690f6b90",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "79fa1f061168",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "79fa1f0611680",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Clínic medio día (4 horas: entrenamiento + charla)"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ac350a129909",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ac350a1299090",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cf9b87ff2cbb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cf9b87ff2cbb0",
+          "_type": "span",
+          "marks": [],
+          "text": "Te presento una propuesta de"
+        },
+        {
+          "_key": "cf9b87ff2cbb1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": " medio día (mañana o tarde)"
+        },
+        {
+          "_key": "cf9b87ff2cbb2",
+          "_type": "span",
+          "marks": [],
+          "text": " para pasar juntos "
+        },
+        {
+          "_key": "cf9b87ff2cbb3",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "4 horas"
+        },
+        {
+          "_key": "cf9b87ff2cbb4",
+          "_type": "span",
+          "marks": [],
+          "text": " con los siguientes contenidos. Podemos ajustar la propuesta a los contenidos específicos que me pidas."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b140e9b601dc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b140e9b601dc0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e604dbfe5307",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e604dbfe53070",
+          "_type": "span",
+          "marks": [],
+          "text": "1 sesión de 90 minutos en piscina"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1aaf424e9c88",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1aaf424e9c880",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "beeb6d8ca3dc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "beeb6d8ca3dc0",
+          "_type": "span",
+          "marks": [],
+          "text": "1 ponencia de 90 minutos"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6dca286b38bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6dca286b38bd0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d1c38f1c105f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d1c38f1c105f0",
+          "_type": "span",
+          "marks": [],
+          "text": "1 sesión de 30 minutos de calentamiento"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "09a35c07687e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "09a35c07687e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0da56b7affa2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0da56b7affa20",
+          "_type": "span",
+          "marks": [],
+          "text": "Preguntas y respuestas"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "01149855dac4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "01149855dac40",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3984aea0903",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b3984aea09030",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Clínic teórico (charlas)"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9c7e7805685c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9c7e7805685c0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ce103dab09fa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ce103dab09fa0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "358ffdcab437",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "358ffdcab4370",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bb0c60b7af78",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bb0c60b7af780",
+          "_type": "span",
+          "marks": [],
+          "text": "Si lo que necesitas es un asesoramiento para un"
+        },
+        {
+          "_key": "bb0c60b7af781",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": " grupo,"
+        },
+        {
+          "_key": "bb0c60b7af782",
+          "_type": "span",
+          "marks": [],
+          "text": " para una "
+        },
+        {
+          "_key": "bb0c60b7af783",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "entidad "
+        },
+        {
+          "_key": "bb0c60b7af784",
+          "_type": "span",
+          "marks": [],
+          "text": "o para un "
+        },
+        {
+          "_key": "bb0c60b7af785",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "evento"
+        },
+        {
+          "_key": "bb0c60b7af786",
+          "_type": "span",
+          "marks": [],
+          "text": ", deberás solicitar un "
+        },
+        {
+          "_key": "bb0c60b7af787",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Clínic presencial teórico"
+        },
+        {
+          "_key": "bb0c60b7af788",
+          "_type": "span",
+          "marks": [],
+          "text": ". Me desplazaré hasta el lugar donde me indiques y disfrutaremos de un buen rato hablando sobre entrenamiento y las aguas abiertas."
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "c8adc68da44c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c8adc68da44c0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f18388ff82ad",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f18388ff82ad0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1f34ac28e02a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1f34ac28e02a0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d96c099b8ea2",
+      "_type": "htmlBlock",
+      "html": "<figure class=\"wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex\"> <p>&nbsp;</p> <figure class=\"wp-block-image size-large\"><img decoding=\"async\" width=\"960\" height=\"610\" data-id=\"351\" class=\"wp-image-351 lazyload\" alt=\"Ponentes jornada aguas abiertas\" data-sizes=\"(max-width: 960px) 100vw, 960px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/fb9ce0d566aa5326b2e79f7d2911deef82d81841-960x610.jpg\" style=\"--smush-placeholder-width: 960px; --smush-placeholder-aspect-ratio: 960/610;\"> <p>&nbsp;</p> <figcaption>Ponentes en las IV Jornadas técnicas de Aguas Abiertas</figcaption> </figure> <p></p> <figure class=\"wp-block-image size-large\"><img decoding=\"async\" width=\"960\" height=\"720\" data-id=\"350\" class=\"wp-image-350 lazyload\" alt=\"Ponente jornada aguas abiertas\" data-sizes=\"(max-width: 960px) 100vw, 960px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/e9042f3c8638b9ed68d5f8a14d48248803b8663d-960x720.jpg\" style=\"--smush-placeholder-width: 960px; --smush-placeholder-aspect-ratio: 960/720;\"> <p>&nbsp;</p> <figcaption>Presentación en las IV Jornadas técnicas de Aguas Abiertas</figcaption> </figure> <p></p> <figure class=\"wp-block-image size-large\"><img decoding=\"async\" width=\"1024\" height=\"1024\" data-id=\"349\" class=\"wp-image-349 lazyload\" alt=\"Ponente jornadas aguas abiertas\" data-sizes=\"(max-width: 1024px) 100vw, 1024px\" src=\"https://cdn.sanity.io/images/t01yxrzf/production/2fe0fff2a932ed15db4935c18f9557eef5d79a81-1024x1024.jpg\" style=\"--smush-placeholder-width: 1024px; --smush-placeholder-aspect-ratio: 1024/1024;\"> <p>&nbsp;</p> <figcaption>Presentación en las IV Jornadas técnicas de Aguas Abiertas</figcaption> </figure> <p></p> </figure>"
+    },
+    {
+      "_key": "26fc8ed2e074",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "26fc8ed2e0740",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2c931be72dd3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2c931be72dd30",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "40839570dd7a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "40839570dd7a0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bef104ef6e94",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bef104ef6e940",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "Precio: a consultar"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6ba40cd4ff66",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6ba40cd4ff660",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7a456f330592",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7a456f3305920",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "091975aad37e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "091975aad37e0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "162bba338d31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "162bba338d310",
+          "_type": "span",
+          "marks": [],
+          "text": "Solicita tu Clínic presencial en la zona de "
+        },
+        {
+          "_key": "162bba338d311",
+          "_type": "span",
+          "marks": [
+            "0b6a1c96e372"
+          ],
+          "text": "Contacto"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "0b6a1c96e372",
+          "_type": "link",
+          "href": "/contact-us/"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "416a1f0e6664",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "416a1f0e66640",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9cbdc75bf9d7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9cbdc75bf9d70",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7ce47ad117aa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7ce47ad117aa0",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "20aff3581298",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "20aff35812980",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "slug": {
+    "current": "clinics-presenciales"
+  },
+  "title": "Clínic presencial"
+}

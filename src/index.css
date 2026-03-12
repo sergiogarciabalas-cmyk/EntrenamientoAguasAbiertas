@@ -529,13 +529,14 @@ table th {
 }
 
 .author-avatar {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.25rem;
   font-weight: bold;
   font-family: var(--font-heading);
 }

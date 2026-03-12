@@ -146,7 +146,7 @@ export const Home = () => {
                                         <Waves className="quote-icon" size={60} />
                                         <p className="testimonial-text">"{testim.quote}"</p>
                                         <div className="testimonial-author">
-                                            <div className="author-avatar" style={testim.imageUrl ? { background: 'transparent', width: '60px', height: '60px', padding: 0, overflow: 'hidden' } : {}}>
+                                            <div className="author-avatar" style={testim.imageUrl ? { background: 'transparent', width: '80px', height: '80px', padding: 0, overflow: 'hidden' } : {}}>
                                                 {testim.imageUrl ? (
                                                     <img src={testim.imageUrl} alt={testim.authorName} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { (e.target as any).style.display = 'none'; (e.target as any).parentElement.style.background = 'var(--color-primary)'; (e.target as any).parentElement.innerText = testim.authorInitials || 'AN'; }} />
                                                 ) : (

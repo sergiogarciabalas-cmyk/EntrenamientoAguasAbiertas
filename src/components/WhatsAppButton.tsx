@@ -1,5 +1,5 @@
 // Si recibimos o añadimos el prefijo, ej. "34666555444"
-export const WhatsAppButton = ({ phoneNumber = "34600000000" }) => {
+export const WhatsAppButton = ({ phoneNumber = "34627767412" }) => {
     return (
         <a
             href={`https://wa.me/${phoneNumber}`}

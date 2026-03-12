@@ -83,15 +83,27 @@ export const Contact = () => {
                                 </div>
                             </div>
 
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                                 <div style={{ background: 'rgba(56, 189, 248, 0.1)', padding: '0.8rem', borderRadius: '50%', color: 'var(--color-primary)' }}>
                                     <Phone size={24} />
                                 </div>
                                 <div>
+                                    <p style={{ margin: 0, fontWeight: 'bold' }}>Teléfono / WhatsApp</p>
+                                    <a href="https://wa.me/34627767412" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
+                                        +34 627 767 412
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                <div style={{ background: 'rgba(56, 189, 248, 0.1)', padding: '0.8rem', borderRadius: '50%', color: 'var(--color-primary)' }}>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                </div>
+                                <div>
                                     <p style={{ margin: 0, fontWeight: 'bold' }}>Redes Sociales</p>
-                                    <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
+                                    <a href="https://instagram.com/SergiSwimCoach" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
                                         @SergiSwimCoach
-                                    </p>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -22,6 +22,14 @@ export default {
             name: 'authorDetails',
             title: 'Detalles (Profesión, Edad, etc.)',
             type: 'string',
+        },
+        {
+            name: 'image',
+            title: 'Fotografía del nadador',
+            type: 'image',
+            options: {
+                hotspot: true,
+            }
         }
     ]
 }

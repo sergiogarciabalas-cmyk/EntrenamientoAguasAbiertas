@@ -13,7 +13,14 @@ export const Home = () => {
 
     useEffect(() => {
         client.fetch(`*[_type == "service"]`).then(setServicesData).catch(console.error);
-        client.fetch(`*[_type == "testimonial"]`).then(setTestimonialsData).catch(console.error);
+        client.fetch(`*[_type == "testimonial"]{
+            _id,
+            quote,
+            authorName,
+            authorInitials,
+            authorDetails,
+            "imageUrl": image.asset->url
+        }`).then(setTestimonialsData).catch(console.error);
     }, []);
 
     return (
@@ -139,7 +146,13 @@ export const Home = () => {
                                         <Waves className="quote-icon" size={60} />
                                         <p className="testimonial-text">"{testim.quote}"</p>
                                         <div className="testimonial-author">
-                                            <div className="author-avatar">{testim.authorInitials || 'AN'}</div>
+                                            <div className="author-avatar" style={testim.imageUrl ? { background: 'transparent', width: '60px', height: '60px', padding: 0, overflow: 'hidden' } : {}}>
+                                                {testim.imageUrl ? (
+                                                    <img src={testim.imageUrl} alt={testim.authorName} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { (e.target as any).style.display = 'none'; (e.target as any).parentElement.style.background = 'var(--color-primary)'; (e.target as any).parentElement.innerText = testim.authorInitials || 'AN'; }} />
+                                                ) : (
+                                                    testim.authorInitials || 'AN'
+                                                )}
+                                            </div>
                                             <div className="author-info">
                                                 <h4 style={{ color: 'white' }}>{testim.authorName}</h4>
                                                 <span>{testim.authorDetails}</span>

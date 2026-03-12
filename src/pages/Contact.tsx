@@ -6,8 +6,7 @@ export const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    // Replace this with your actual Formspree endpoint URL
-    const FORMSPREE_URL = "https://formspree.io/f/REPLACE_WITH_YOUR_ID";
+    const FORMSPREE_URL = "https://formspree.io/f/xvzwrzeb";
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

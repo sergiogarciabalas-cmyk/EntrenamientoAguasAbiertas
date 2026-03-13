@@ -1,4 +1,4 @@
-import { useState } from 'react'; // Añadimos useState
+import { useState } from 'react';
 import { Lock, ArrowRight, ExternalLink, Mail } from 'lucide-react';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,6 @@ export const PrivateArea = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-    // Usamos tu ID de Formspree (el mismo de contacto para centralizar)
     const FORMSPREE_URL = "https://formspree.io/f/xvzwrzeb";
 
     const handleSubscribe = async (e: React.FormEvent) => {
@@ -49,11 +48,22 @@ export const PrivateArea = () => {
                     </div>
                 </RevealOnScroll>
 
-                <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', maxWidth: '800px', margin: '0 auto' }}>
+                <div className="services-grid" style={{ 
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+                    maxWidth: '800px', 
+                    margin: '0 auto',
+                    gap: '2rem' 
+                }}>
                     
-                    {/* App de Entrenamiento - ACTUALIZADO */}
+                    {/* App de Entrenamiento */}
                     <RevealOnScroll className="delay-1">
-                        <div className="service-card glass" style={{ textAlign: 'center', alignItems: 'center', height: '100%' }}>
+                        <div className="service-card glass" style={{ 
+                            textAlign: 'center', 
+                            alignItems: 'center', 
+                            height: '100%',
+                            position: 'relative', // Importante para el clic
+                            zIndex: 10            // Asegura que esté por encima de la animación
+                        }}>
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
                                 <ExternalLink size={32} />
                             </div>
@@ -64,7 +74,13 @@ export const PrivateArea = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className="btn btn-primary" 
-                                style={{ marginTop: '1.5rem', width: '100%' }}
+                                style={{ 
+                                    marginTop: '1.5rem', 
+                                    width: '100%',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}
                             >
                                 Iniciar Sesión <ArrowRight size={16} style={{ marginLeft: '0.5rem' }} />
                             </a>
@@ -73,7 +89,13 @@ export const PrivateArea = () => {
 
                     {/* Newsletter Exclusiva */}
                     <RevealOnScroll className="delay-2">
-                        <div className="service-card glass" style={{ textAlign: 'center', alignItems: 'center', height: '100%' }}>
+                        <div className="service-card glass" style={{ 
+                            textAlign: 'center', 
+                            alignItems: 'center', 
+                            height: '100%',
+                            position: 'relative', // Importante para el clic
+                            zIndex: 10            // Asegura que esté por encima de la animación
+                        }}>
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
                                 <Mail size={32} />
                             </div>
@@ -81,19 +103,27 @@ export const PrivateArea = () => {
                             
                             {status === 'success' ? (
                                 <div style={{ padding: '1rem', color: 'var(--color-primary)' }}>
-                                    <p>¡Gracias por suscribirte! Revisa tu bandeja de entrada.</p>
+                                    <p>¡Gracias por suscribirte!</p>
                                     <button onClick={() => setStatus('idle')} className="btn btn-outline" style={{ marginTop: '1rem' }}>Volver</button>
                                 </div>
                             ) : (
                                 <>
                                     <p>Recibe consejos técnicos y acceso prioritario a los clínics.</p>
                                     
-                                    <form onSubmit={handleSubscribe} style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
+                                    <form onSubmit={handleSubscribe} style={{ 
+                                        marginTop: '1.5rem', 
+                                        display: 'flex', 
+                                        flexDirection: 'column', 
+                                        gap: '1rem', 
+                                        width: '100%',
+                                        position: 'relative',
+                                        zIndex: 20
+                                    }}>
                                         <input 
                                             type="email" 
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            placeholder="Tu mejor email..." 
+                                            placeholder="Tu email..." 
                                             required 
                                             style={{
                                                 padding: '0.75rem 1rem',
@@ -105,7 +135,6 @@ export const PrivateArea = () => {
                                             }}
                                         />
                                         
-                                        {/* Checkbox Legal Obligatorio */}
                                         <div style={{ display: 'flex', gap: '0.5rem', textAlign: 'left', alignItems: 'flex-start' }}>
                                             <input 
                                                 type="checkbox" 
@@ -113,10 +142,10 @@ export const PrivateArea = () => {
                                                 required 
                                                 checked={privacyAccepted}
                                                 onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                                                style={{ marginTop: '0.2rem' }}
+                                                style={{ marginTop: '0.2rem', cursor: 'pointer' }}
                                             />
-                                            <label htmlFor="privacy-news" style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', lineHeight: '1.2' }}>
-                                                Acepto la <Link to="/privacidad" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Política de Privacidad</Link> para recibir comunicaciones.
+                                            <label htmlFor="privacy-news" style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', cursor: 'pointer' }}>
+                                                Acepto la <Link to="/privacidad" style={{ color: 'var(--color-primary)' }}>Política de Privacidad</Link>.
                                             </label>
                                         </div>
 
@@ -124,12 +153,15 @@ export const PrivateArea = () => {
                                             type="submit" 
                                             className="btn btn-outline" 
                                             disabled={isSubmitting || !privacyAccepted}
-                                            style={{ width: '100%', justifyContent: 'center', opacity: (!privacyAccepted || isSubmitting) ? 0.5 : 1 }}
+                                            style={{ 
+                                                width: '100%', 
+                                                justifyContent: 'center', 
+                                                opacity: (!privacyAccepted || isSubmitting) ? 0.5 : 1,
+                                                cursor: privacyAccepted ? 'pointer' : 'not-allowed'
+                                            }}
                                         >
                                             {isSubmitting ? 'Suscribiendo...' : 'Suscribirse'}
                                         </button>
-                                        
-                                        {status === 'error' && <p style={{ color: '#f97373', fontSize: '0.8rem' }}>Error. Inténtalo de nuevo.</p>}
                                     </form>
                                 </>
                             )}

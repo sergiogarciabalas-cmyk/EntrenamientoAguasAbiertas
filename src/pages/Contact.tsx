@@ -1,16 +1,24 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { RevealOnScroll } from '../components/RevealOnScroll';
+import { Link } from 'react-router-dom'; // Importamos Link para la política
 
 export const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    const [privacyAccepted, setPrivacyAccepted] = useState(false); // Estado para el checkbox
 
     const FORMSPREE_URL = "https://formspree.io/f/xvzwrzeb";
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        
+        if (!privacyAccepted) {
+            setErrorMessage("Debes aceptar la política de privacidad para enviar el mensaje.");
+            return;
+        }
+
         setIsSubmitting(true);
         setErrorMessage(null);
 
@@ -27,20 +35,18 @@ export const Contact = () => {
             });
 
             const json = await response.json().catch(() => null);
-            console.log("Formspree response:", response.status, json);
 
             if (response.ok && (!json || json.ok)) {
                 setIsSuccess(true);
                 form.reset();
+                setPrivacyAccepted(false);
             } else {
                 const message =
                     (json && (json.error || (Array.isArray(json.errors) && json.errors[0]?.message))) ||
                     "No se ha podido enviar el mensaje. Inténtalo de nuevo en unos minutos.";
-                console.error("Formspree error:", response.status, json);
                 setErrorMessage(message);
             }
         } catch (error) {
-            console.error(error);
             setErrorMessage("Ha ocurrido un error al enviar el mensaje. Revisa tu conexión e inténtalo de nuevo.");
         } finally {
             setIsSubmitting(false);
@@ -83,7 +89,7 @@ export const Contact = () => {
                                 <div>
                                     <p style={{ margin: 0, fontWeight: 'bold' }}>Ubicación</p>
                                     <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
-                                        Mataró, Barcelona (España) - Disponible para consultas online en todo el mundo
+                                        Mataró, Barcelona (España)
                                     </p>
                                 </div>
                             </div>
@@ -102,10 +108,10 @@ export const Contact = () => {
 
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                 <div style={{ background: 'rgba(56, 189, 248, 0.1)', padding: '0.8rem', borderRadius: '50%', color: 'var(--color-primary)' }}>
-                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                                 </div>
                                 <div>
-                                    <p style={{ margin: 0, fontWeight: 'bold' }}>Redes Sociales</p>
+                                    <p style={{ margin: 0, fontWeight: 'bold' }}>Instagram</p>
                                     <a href="https://instagram.com/SergiSwimCoach" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
                                         @SergiSwimCoach
                                     </a>
@@ -123,14 +129,14 @@ export const Contact = () => {
                                         <Send size={30} />
                                     </div>
                                     <h3>¡Mensaje enviado con éxito!</h3>
-                                    <p style={{ color: 'var(--color-text-muted)' }}>He recibido tu mensaje. Me pondré en contacto contigo lo antes posible para empezar a trabajar en tus objetivos.</p>
+                                    <p style={{ color: 'var(--color-text-muted)' }}>He recibido tu mensaje. Me pondré en contacto contigo lo antes posible.</p>
                                     <button onClick={() => setIsSuccess(false)} className="btn btn-outline" style={{ marginTop: '1rem' }}>
                                         Enviar otro mensaje
                                     </button>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                                    <div style={{ display: 'flex', gap: '1.5rem', flexDirection: 'column' }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
 
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                             <label htmlFor="name" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>Nombre completo</label>
@@ -176,10 +182,26 @@ export const Contact = () => {
                                                 id="message"
                                                 name="message"
                                                 required
-                                                rows={5}
+                                                rows={4}
                                                 style={{ padding: '0.8rem', borderRadius: '0.5rem', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.2)', color: 'var(--color-text)', width: '100%', resize: 'vertical' }}
-                                                placeholder="Cuéntame tu nivel actual, objetivos y disponibilidad..."
+                                                placeholder="Cuéntame tu nivel actual y objetivos..."
                                             ></textarea>
+                                        </div>
+
+                                        {/* Casilla RGPD */}
+                                        <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start', marginTop: '0.5rem' }}>
+                                            <input 
+                                                type="checkbox" 
+                                                id="privacy" 
+                                                name="privacy" 
+                                                required 
+                                                checked={privacyAccepted}
+                                                onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                                                style={{ marginTop: '0.3rem', cursor: 'pointer' }}
+                                            />
+                                            <label htmlFor="privacy" style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', cursor: 'pointer', lineHeight: '1.4' }}>
+                                                He leído y acepto la <Link to="/privacidad" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Política de Privacidad</Link>. Entiendo que mis datos se usarán exclusivamente para responder a esta consulta.
+                                            </label>
                                         </div>
 
                                     </div>
@@ -190,7 +212,12 @@ export const Contact = () => {
                                         </p>
                                     )}
 
-                                    <button type="submit" className="btn btn-primary" disabled={isSubmitting} style={{ width: '100%', display: 'flex', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1, marginTop: '0.5rem' }}>
+                                    <button 
+                                        type="submit" 
+                                        className="btn btn-primary" 
+                                        disabled={isSubmitting || !privacyAccepted} 
+                                        style={{ width: '100%', display: 'flex', justifyContent: 'center', opacity: (isSubmitting || !privacyAccepted) ? 0.6 : 1, marginTop: '0.5rem' }}
+                                    >
                                         {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
                                     </button>
                                 </form>

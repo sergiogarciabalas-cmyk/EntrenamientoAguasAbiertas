@@ -83,7 +83,7 @@ export const Contact = () => {
                                 <div>
                                     <p style={{ margin: 0, fontWeight: 'bold' }}>Ubicación</p>
                                     <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
-                                        Costa Brava & Eventos Nacionales
+                                        Mataró, Barcelona (España) - Disponible para consultas online en todo el mundo
                                     </p>
                                 </div>
                             </div>

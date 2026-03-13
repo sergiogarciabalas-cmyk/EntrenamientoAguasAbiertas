@@ -55,35 +55,42 @@ export const PrivateArea = () => {
                     gap: '2rem' 
                 }}>
                     
-                    {/* App de Entrenamiento */}
+                    {/* App de Entrenamiento - VERSIÓN CORREGIDA */}
                     <RevealOnScroll className="delay-1">
                         <div className="service-card glass" style={{ 
                             textAlign: 'center', 
                             alignItems: 'center', 
                             height: '100%',
-                            position: 'relative', // Importante para el clic
-                            zIndex: 10            // Asegura que esté por encima de la animación
+                            position: 'relative', 
+                            zIndex: 50, // Elevamos la tarjeta entera
+                            pointerEvents: 'auto' // Forzamos que acepte eventos de ratón
                         }}>
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
                                 <ExternalLink size={32} />
                             </div>
                             <h3>App de Entrenamiento</h3>
-                            <p>Accede a la plataforma Apex Swim para ver tus rutinas diarias y seguimiento de progreso.</p>
-                            <a 
-                                href="https://apex-swim.vercel.app/" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="btn btn-primary" 
-                                style={{ 
-                                    marginTop: '1.5rem', 
-                                    width: '100%',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center'
-                                }}
-                            >
-                                Iniciar Sesión <ArrowRight size={16} style={{ marginLeft: '0.5rem' }} />
-                            </a>
+                            <p>Accede a la plataforma Apex Swim para ver tus rutinas diarias y seguimiento de progreso. Gestiona tus nadadores, tus grupos de entrenamiento o hasta tu Club con el perfil Director Técnico</p>
+                            
+                            {/* Usamos un div contenedor para asegurar el área de clic */}
+                            <div style={{ marginTop: '1.5rem', width: '100%' }}>
+                                <a 
+                                    href="https://apex-swim.vercel.app/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="btn btn-primary" 
+                                    style={{ 
+                                        display: 'flex', // Cambiado a flex para controlar mejor el espacio
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        width: '100%',
+                                        position: 'relative',
+                                        zIndex: 100,
+                                        cursor: 'pointer' // Forzamos el cursor de mano
+                                    }}
+                                >
+                                    Iniciar Sesión <ArrowRight size={16} style={{ marginLeft: '0.5rem' }} />
+                                </a>
+                            </div>
                         </div>
                     </RevealOnScroll>
 

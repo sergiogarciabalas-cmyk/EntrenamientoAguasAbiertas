@@ -69,12 +69,12 @@ export const PrivateArea = () => {
                                 <ExternalLink size={32} />
                             </div>
                             <h3>App de Entrenamiento</h3>
-                            <p>Accede a la plataforma Apex Swim para ver tus rutinas diarias y seguimiento de progreso. Gestiona tus nadadores, tus grupos de entrenamiento e incluso tu Club con el perfil de Director Técnico</p>
+                            <p>Accede a la plataforma Swimtific para ver tus rutinas diarias y seguimiento de progreso. Gestiona tus nadadores, tus grupos de entrenamiento e incluso tu Club con el perfil de Director Técnico</p>
                             
                             {/* Usamos un div contenedor para asegurar el área de clic */}
                             <div style={{ marginTop: '1.5rem', width: '100%' }}>
                                 <a 
-                                    href="https://apex-swim.vercel.app/" 
+                                    href="https://swimtific.vercel.app/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="btn btn-primary" 

@@ -55,41 +55,47 @@ export const PrivateArea = () => {
                     gap: '2rem' 
                 }}>
                     
-                    {/* App de Entrenamiento - VERSIÓN CORREGIDA */}
+                    {/* App Swintific - Estado Próximamente */}
                     <RevealOnScroll className="delay-1">
                         <div className="service-card glass" style={{ 
                             textAlign: 'center', 
                             alignItems: 'center', 
                             height: '100%',
-                            position: 'relative', 
-                            zIndex: 50, // Elevamos la tarjeta entera
-                            pointerEvents: 'auto' // Forzamos que acepte eventos de ratón
+                            position: 'relative',
+                            display: 'flex',
+                            flexDirection: 'column'
                         }}>
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
                                 <ExternalLink size={32} />
                             </div>
-                            <h3>App de Entrenamiento</h3>
-                            <p>Accede a la plataforma Swimtific para ver tus rutinas diarias y seguimiento de progreso. Gestiona tus nadadores, tus grupos de entrenamiento e incluso tu Club con el perfil de Director Técnico</p>
+                            <h3>Swintific</h3>
+                            <p>La nueva plataforma avanzada para el análisis de tus entrenamientos de natación y técnica.</p>
                             
-                            {/* Usamos un div contenedor para asegurar el área de clic */}
-                            <div style={{ marginTop: '1.5rem', width: '100%' }}>
-                                <a 
-                                    href="https://swimtific.vercel.app/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="btn btn-primary" 
+                            <div style={{ marginTop: 'auto', width: '100%', paddingTop: '1.5rem' }}>
+                                <button 
+                                    disabled 
                                     style={{ 
-                                        display: 'flex', // Cambiado a flex para controlar mejor el espacio
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        width: '100%',
-                                        position: 'relative',
-                                        zIndex: 100,
-                                        cursor: 'pointer' // Forzamos el cursor de mano
+                                        width: '100%', 
+                                        padding: '0.75rem', 
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid rgba(56, 189, 248, 0.2)',
+                                        background: 'rgba(56, 189, 248, 0.05)',
+                                        color: 'rgba(255, 255, 255, 0.4)',
+                                        cursor: 'not-allowed',
+                                        fontSize: '0.9rem',
+                                        fontWeight: '500'
                                     }}
                                 >
-                                    Iniciar Sesión <ArrowRight size={16} style={{ marginLeft: '0.5rem' }} />
-                                </a>
+                                    Disponible Próximamente
+                                </button>
+                                <p style={{ 
+                                    fontSize: '0.75rem', 
+                                    marginTop: '0.75rem', 
+                                    color: 'var(--color-primary)',
+                                    fontStyle: 'italic'
+                                }}>
+                                    * Acceso prioritario para alumnos y suscriptores.
+                                </p>
                             </div>
                         </div>
                     </RevealOnScroll>

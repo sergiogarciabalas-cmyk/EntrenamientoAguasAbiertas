@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Lock, ArrowRight, ExternalLink, Mail } from 'lucide-react';
+import { Lock, ExternalLink, Mail } from 'lucide-react';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom';
 

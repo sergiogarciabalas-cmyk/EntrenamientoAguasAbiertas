@@ -1,6 +1,12 @@
 import { RevealOnScroll } from '../components/RevealOnScroll';
+import { useSEO } from '../hooks/useSEO';
 
 export const Placeholder = ({ title }: { title: string }) => {
+    useSEO({
+        title: `${title} | Sergi García`,
+        description: 'Página en construcción.'
+    });
+
     return (
         <div style={{ paddingTop: '150px', minHeight: '60vh', textAlign: 'center' }}>
             <div className="container">

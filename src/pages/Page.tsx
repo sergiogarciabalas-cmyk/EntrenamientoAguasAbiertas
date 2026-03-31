@@ -5,6 +5,7 @@ import { RevealOnScroll } from '../components/RevealOnScroll';
 import { PortableText } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
 import he from 'he';
+import { useSEO } from '../hooks/useSEO';
 
 const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
@@ -93,6 +94,11 @@ export const Page = ({ fixedSlug }: { fixedSlug?: string }) => {
 
     const [pageData, setPageData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+
+    useSEO({
+        title: pageData ? `${he.decode(pageData.title || '')} | Sergi García` : 'Cargando...',
+        description: 'Página de información sobre servicios de natación y entrenamiento.'
+    });
 
     useEffect(() => {
         client.fetch(`

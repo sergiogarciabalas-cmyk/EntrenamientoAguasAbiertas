@@ -6,8 +6,14 @@ import {
 import { client } from '../sanity';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const Home = () => {
+    useSEO({
+        title: 'Entrenador de Aguas Abiertas y Natación | Sergi García',
+        description: 'Descubre las aguas abiertas a otro nivel con Sergi García. Mejora tu forma física mediante la natación y prepárate para retos de aguas abiertas.'
+    });
+
     const [servicesData, setServicesData] = useState([]);
     const [testimonialsData, setTestimonialsData] = useState([]);
 
@@ -34,7 +40,7 @@ export const Home = () => {
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.85) 0%, rgba(4,9,20,0.6) 50%, rgba(4,9,20,0.95) 100%)' }}></div>
                 <div className="container hero-grid" style={{ zIndex: 1, position: 'relative', gridTemplateColumns: 'minmax(0, 1fr)' }}>
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                        <h1 className="fade-in-up">Entrenamiento Aguas Abiertas</h1>
+                        <h1 className="fade-in-up">Entrenamiento de Aguas Abiertas <br/>y Natación con <span className="text-gradient">Sergi García</span></h1>
                         <p className="fade-in-up delay-1" style={{ fontSize: '1.25rem', margin: '0 auto 2rem', marginTop: '1.5rem' }}>Descubre las aguas abiertas a otro nivel. Mejora tu forma física mediante la natación, prepárate para retos de aguas abiertas y aprende a entrenar dentro y fuera del agua.</p>
 
                         <div className="hero-actions fade-in-up delay-3" style={{ justifyContent: 'center' }}>
@@ -49,7 +55,7 @@ export const Home = () => {
             <section className="section" id="servicios">
                 <div className="container">
                     <RevealOnScroll>
-                        <h2 className="section-title">Principales <span className="text-gradient">Servicios</span></h2>
+                        <h2 className="section-title">Servicios de <span className="text-gradient">Tecnificación y Alto Rendimiento</span></h2>
                         <p className="section-subtitle">Programas diseñados para adaptarse a tus objetivos, ya sea mejorar tu técnica, preparar una travesía o competir a alto nivel.</p>
                     </RevealOnScroll>
 
@@ -134,7 +140,7 @@ export const Home = () => {
             <section className="section testimonials" id="testimonios">
                 <div className="container">
                     <RevealOnScroll>
-                        <h2 className="section-title">Diferentes perfiles, <span className="text-gradient">mismo compromiso</span></h2>
+                        <h2 className="section-title"><span className="text-gradient">Sergi García:</span> Tu Coach de Aguas Abiertas</h2>
                         <p className="section-subtitle">Conoce la experiencia de nadadores que han llevado su rendimiento al siguiente nivel.</p>
                     </RevealOnScroll>
 
@@ -220,7 +226,7 @@ export const Home = () => {
                 <div className="container">
                     <RevealOnScroll>
                         <div className="cta-box">
-                            <h2>¿A qué esperas? <span className="text-gradient">Preparo un plan a tu medida</span></h2>
+                            <h2>Empieza a entrenar <span className="text-gradient">hoy conmigo</span></h2>
                             <p>Plantéame tu caso sin compromiso. Evaluaremos tu situación actual y trazaremos el mejor camino hacia tus objetivos.</p>
                             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                                 <Link to="/contacto" className="btn btn-primary">

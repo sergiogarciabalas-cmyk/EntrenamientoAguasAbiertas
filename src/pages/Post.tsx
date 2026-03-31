@@ -6,6 +6,7 @@ import { PortableText } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
 import { ArrowLeft } from 'lucide-react';
 import he from 'he';
+import { useSEO } from '../hooks/useSEO';
 
 const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
@@ -77,6 +78,11 @@ export const Post = () => {
     const { slug } = useParams();
     const [postData, setPostData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+
+    useSEO({
+        title: postData ? `${he.decode(postData.title || '')} | Sergi García Blog` : 'Cargando artículo...',
+        description: postData?.excerpt || 'Artículo del blog sobre natación y entrenamiento en aguas abiertas.'
+    });
 
     useEffect(() => {
         client.fetch(`

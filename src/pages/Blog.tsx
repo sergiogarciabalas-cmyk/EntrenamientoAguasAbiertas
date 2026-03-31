@@ -4,6 +4,7 @@ import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom';
 import imageUrlBuilder from '@sanity/image-url';
 import he from 'he';
+import { useSEO } from '../hooks/useSEO';
 
 const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
@@ -11,6 +12,11 @@ function urlFor(source: any) {
 }
 
 export const Blog = () => {
+    useSEO({
+        title: 'Blog de Natación y Aguas Abiertas | Sergi García',
+        description: 'Consejos, noticias, artículos de técnica y rutinas sobre entrenamiento en aguas abiertas y natación.'
+    });
+
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -32,7 +38,7 @@ export const Blog = () => {
             <div className="container">
                 <RevealOnScroll>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <h1 className="section-title">Nuestro <span className="text-gradient">Blog</span></h1>
+                        <h1 className="section-title">Blog de <span className="text-gradient">Natación y Aguas Abiertas</span></h1>
                         <p className="section-subtitle">Consejos, noticias y artículos sobre entrenamiento en aguas abiertas.</p>
                     </div>
                 </RevealOnScroll>

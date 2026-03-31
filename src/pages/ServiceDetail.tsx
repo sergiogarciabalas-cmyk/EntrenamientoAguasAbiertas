@@ -6,6 +6,7 @@ import { PortableText } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
 import { ArrowLeft, CheckCircle2, ChevronDown, ChevronUp, Tag } from 'lucide-react';
 import he from 'he';
+import { useSEO } from '../hooks/useSEO';
 
 const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -113,6 +114,11 @@ export const ServiceDetail = ({ fixedSlug }: { fixedSlug?: string }) => {
     const slug = fixedSlug || urlSlug;
     const [service, setService] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+
+    useSEO({
+        title: service ? `${he.decode(service.title || '')} | Sergi García` : 'Cargando servicio...',
+        description: service?.description || 'Planes de entrenamiento y clinics presenciales en aguas abiertas.'
+    });
 
     useEffect(() => {
         client.fetch(`

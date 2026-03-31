@@ -2,8 +2,14 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom'; // Importamos Link para la política
+import { useSEO } from '../hooks/useSEO';
 
 export const Contact = () => {
+    useSEO({
+        title: 'Contacto y Asesoría | Sergi García',
+        description: 'Contacta conmigo para resolver tus dudas sobre los planes de entrenamiento en aguas abiertas, los clínics presenciales de natación o cualquier consulta.'
+    });
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -58,7 +64,7 @@ export const Contact = () => {
             <div className="container" style={{ maxWidth: '1000px' }}>
                 <RevealOnScroll>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h1 className="section-title">Habla <span className="text-gradient">Conmigo</span></h1>
+                        <h1 className="section-title">Contacta con <span className="text-gradient">Sergi García</span></h1>
                         <p className="section-subtitle">¿Tienes dudas sobre los planes de entrenamiento, los clínics o cualquier otro servicio? Escríbeme y trazaremos el mejor camino hacia tus objetivos.</p>
                     </div>
                 </RevealOnScroll>

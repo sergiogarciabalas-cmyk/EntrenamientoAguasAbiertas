@@ -2,8 +2,14 @@ import { useState } from 'react';
 import { Lock, ExternalLink, Mail } from 'lucide-react';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const PrivateArea = () => {
+    useSEO({
+        title: 'Área Privada para Alumnos | Sergi García',
+        description: 'Accede a tus planes de entrenamiento, contenido exclusivo y seguimiento de progreso.'
+    });
+
     const [email, setEmail] = useState('');
     const [privacyAccepted, setPrivacyAccepted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,7 +49,7 @@ export const PrivateArea = () => {
                 <RevealOnScroll>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <Lock size={48} className="text-gradient" style={{ margin: '0 auto 1rem' }} />
-                        <h1 className="section-title">Área <span className="text-gradient">Privada</span></h1>
+                        <h1 className="section-title">Área Privada <span className="text-gradient">para Alumnos</span></h1>
                         <p className="section-subtitle">Accede a tus planes de entrenamiento, contenido exclusivo y seguimiento de progreso.</p>
                     </div>
                 </RevealOnScroll>

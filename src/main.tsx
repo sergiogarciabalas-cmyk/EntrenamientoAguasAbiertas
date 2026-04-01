@@ -11,6 +11,7 @@ import { Post } from './pages/Post.tsx'
 import { Page } from './pages/Page.tsx'
 import { Contact } from './pages/Contact.tsx'
 import { ServiceDetail } from './pages/ServiceDetail.tsx'
+import { NotFound } from './pages/NotFound.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
 
 createRoot(document.getElementById('root')!).render(
@@ -41,6 +42,9 @@ createRoot(document.getElementById('root')!).render(
             <Route index element={<Page fixedSlug="servicios-sergi-swim-coach" />} />
             <Route path=":slug" element={<ServiceDetail />} />
           </Route>
+          
+          {/* Catch-all route for missing pages */}
+          <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="/studio/*" element={<StudioPage />} />
       </Routes>

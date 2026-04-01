@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Waves, Menu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Waves, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -12,6 +14,11 @@ export const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Effect to close mobile menu on route changes
+    useEffect(() => {
+        setMobileMenuOpen(false);
+    }, [location.pathname]);
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -23,7 +30,7 @@ export const Navbar = () => {
                         <span style={{ fontSize: '0.75rem', fontWeight: 'normal', color: 'var(--color-text-muted, #888)', letterSpacing: '0.05em', marginTop: '-2px' }}>Entrenamiento Aguas Abiertas</span>
                     </div>
                 </Link>
-                <div className="nav-links">
+                <div className={`nav-links ${mobileMenuOpen ? 'mobile-active' : ''}`}>
                     <Link to="/" className="nav-link">Inicio</Link>
                     <Link to="/sobre-mi" className="nav-link">Sobre mi</Link>
                     <div className="dropdown" style={{ position: 'relative', display: 'inline-block' }}>
@@ -48,7 +55,14 @@ export const Navbar = () => {
                         Área Privada
                     </Link>
                 </div>
-                <Menu className="mobile-menu-icon" style={{ display: 'none' }} />
+                <button 
+                    className="mobile-menu-btn" 
+                    style={{ background: 'none', border: 'none', color: 'white', display: 'none', cursor: 'pointer', zIndex: 101 }}
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú móvil'}
+                >
+                    {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
             </div>
         </nav>
     );

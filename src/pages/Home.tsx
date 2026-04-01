@@ -33,11 +33,12 @@ export const Home = () => {
         <>
             <section className="hero" id="inicio" style={{
                 backgroundImage: 'url("/hero-bg.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundSize: 'contain',
+                backgroundPosition: 'top center',
+                backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'local'
             }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.85) 0%, rgba(4,9,20,0.4) 50%, rgba(4,9,20,0.95) 100%)' }}></div>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.4) 0%, rgba(4,9,20,0.85) 50%, rgba(4,9,20,0.95) 100%)' }}></div>
                 
                 <div className="container hero-grid" style={{ zIndex: 1, position: 'relative', gridTemplateColumns: 'minmax(0, 1fr)', height: '100%', display: 'flex', alignItems: 'center' }}>
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>

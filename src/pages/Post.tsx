@@ -7,6 +7,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import { ArrowLeft, Clock, Share2, MessageCircle, Link as LinkIcon, Twitter, Facebook, Linkedin } from 'lucide-react';
 import he from 'he';
 import { useSEO } from '../hooks/useSEO';
+import { Newsletter } from '../components/Newsletter';
 
 const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
@@ -228,6 +229,10 @@ export const Post = () => {
                             </button>
                         </div>
                     </div>
+                </RevealOnScroll>
+
+                <RevealOnScroll className="delay-4">
+                    <Newsletter />
                 </RevealOnScroll>
             </article>
         </div>

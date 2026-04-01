@@ -4,7 +4,7 @@ import { client } from '../sanity';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { PortableText } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Clock, Share2, MessageCircle, Link as LinkIcon, Twitter, Facebook, Linkedin } from 'lucide-react';
 import he from 'he';
 import { useSEO } from '../hooks/useSEO';
 
@@ -78,6 +78,26 @@ export const Post = () => {
     const { slug } = useParams();
     const [postData, setPostData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+    const [copied, setCopied] = useState(false);
+
+    const extractText = (blocks: any[]): string => {
+        if (!blocks || !Array.isArray(blocks)) return '';
+        return blocks.map(block => {
+            if (block._type !== 'block' || !block.children) return '';
+            return block.children.map((child: { text: string }) => child.text).join('');
+        }).join(' ');
+    };
+
+    const readingTime = Math.max(1, Math.ceil(extractText(postData?.body).split(/\s+/).length / 200));
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const shareTitle = typeof window !== 'undefined' && postData ? encodeURIComponent(he.decode(postData.title)) : '';
+    const encodedUrl = encodeURIComponent(currentUrl);
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(currentUrl);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
 
     useSEO({
         title: postData ? `${he.decode(postData.title || '')} | Sergi García Blog` : 'Cargando artículo...',
@@ -139,12 +159,17 @@ export const Post = () => {
                             />
                         )}
                         <div>
-                            <p style={{ fontWeight: 'bold', margin: 0 }}>{postData.authorName}</p>
-                            {postData.publishedAt && (
-                                <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
-                                    {new Date(postData.publishedAt).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
-                                </p>
-                            )}
+                            <p style={{ fontWeight: 'bold', margin: '0 0 0.2rem 0' }}>{postData.authorName}</p>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--color-text-muted)', fontSize: '0.85rem' }}>
+                                {postData.publishedAt && (
+                                    <span>
+                                        {new Date(postData.publishedAt).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+                                    </span>
+                                )}
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                                    <Clock size={14} /> {readingTime} min lectura
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </RevealOnScroll>
@@ -162,6 +187,32 @@ export const Post = () => {
                 <RevealOnScroll className="delay-2">
                     <div className="portable-text-container" style={{ fontSize: '1.1rem' }}>
                         <PortableText value={postData.body} components={ptComponents} />
+                    </div>
+                </RevealOnScroll>
+
+                <RevealOnScroll className="delay-3">
+                    <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+                        <h3 style={{ marginBottom: '1.5rem', fontSize: '1.2rem' }}>
+                            <Share2 size={20} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '0.5rem' }}/> 
+                            ¿Te ha servido? ¡Compártelo!
+                        </h3>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+                            <a href={`https://wa.me/?text=${shareTitle}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#25D366', color: '#25D366' }}>
+                                <MessageCircle size={18} /> WhatsApp
+                            </a>
+                            <a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#1DA1F2', color: '#1DA1F2' }}>
+                                <Twitter size={18} /> X (Twitter)
+                            </a>
+                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#1877F2', color: '#1877F2' }}>
+                                <Facebook size={18} /> Facebook
+                            </a>
+                            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#0A66C2', color: '#0A66C2' }}>
+                                <Linkedin size={18} /> LinkedIn
+                            </a>
+                            <button onClick={copyToClipboard} className="btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: copied ? '#2ecc71' : 'var(--color-surface)' }}>
+                                <LinkIcon size={18} /> {copied ? '¡Copiado!' : 'Copiar Link'}
+                            </button>
+                        </div>
                     </div>
                 </RevealOnScroll>
             </article>

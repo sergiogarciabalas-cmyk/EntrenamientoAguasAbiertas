@@ -13,6 +13,7 @@ import { Contact } from './pages/Contact.tsx'
 import { ServiceDetail } from './pages/ServiceDetail.tsx'
 import { NotFound } from './pages/NotFound.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
+import { Analytics } from '@vercel/analytics/react'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -49,5 +50,6 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/studio/*" element={<StudioPage />} />
       </Routes>
     </BrowserRouter>
+    <Analytics />
   </StrictMode>,
 )

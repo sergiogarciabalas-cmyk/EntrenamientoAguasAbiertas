@@ -37,14 +37,20 @@ export const Home = () => {
                 backgroundPosition: 'center',
                 backgroundAttachment: 'local'
             }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.85) 0%, rgba(4,9,20,0.6) 50%, rgba(4,9,20,0.95) 100%)' }}></div>
-                <div className="container hero-grid" style={{ zIndex: 1, position: 'relative', gridTemplateColumns: 'minmax(0, 1fr)' }}>
-                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                        <h1 className="fade-in-up">Entrenamiento de Aguas Abiertas <br/>y Natación con <span className="text-gradient">Sergi García</span></h1>
-                        <p className="fade-in-up delay-1" style={{ fontSize: '1.25rem', margin: '0 auto 2rem', marginTop: '1.5rem' }}>Descubre las aguas abiertas a otro nivel. Mejora tu forma física mediante la natación, prepárate para retos de aguas abiertas y aprende a entrenar dentro y fuera del agua.</p>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(4,9,20,0.95) 0%, rgba(4,9,20,0.4) 60%, rgba(4,9,20,0.1) 100%)' }}></div>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(4,9,20,1) 0%, rgba(4,9,20,0) 15%)' }}></div>
+                
+                <div className="container" style={{ zIndex: 1, position: 'relative', display: 'flex', alignItems: 'center', height: '100%' }}>
+                    <div className="hero-content" style={{ textAlign: 'left', maxWidth: '700px', marginLeft: '0', paddingRight: '2rem' }}>
+                        <h1 className="fade-in-up" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.15', marginBottom: '1.5rem' }}>
+                            Entrenamiento de Aguas Abiertas <br/>y Natación con <span className="text-gradient">Sergi García</span>
+                        </h1>
+                        <p className="fade-in-up delay-1" style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '2.5rem', lineHeight: '1.6' }}>
+                            Descubre las aguas abiertas a otro nivel. Mejora tu forma física mediante la natación, prepárate para retos de aguas abiertas y aprende a entrenar dentro y fuera del agua.
+                        </p>
 
-                        <div className="hero-actions fade-in-up delay-3" style={{ justifyContent: 'center' }}>
-                            <Link to="/servicios" className="btn btn-primary">
+                        <div className="hero-actions fade-in-up delay-3" style={{ justifyContent: 'flex-start' }}>
+                            <Link to="/servicios" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2rem' }}>
                                 Empieza hoy <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
                             </Link>
                         </div>

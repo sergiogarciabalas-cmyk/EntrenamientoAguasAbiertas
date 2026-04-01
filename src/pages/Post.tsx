@@ -138,8 +138,22 @@ export const Post = () => {
         );
     }
 
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": he.decode(postData.title || ''),
+        "image": postData.mainImage ? [urlFor(postData.mainImage).width(1200).height(600).url()] : [],
+        "datePublished": postData.publishedAt ? new Date(postData.publishedAt).toISOString() : '',
+        "author": [{
+            "@type": "Person",
+            "name": postData.authorName,
+            "url": "https://entrenamientoaguasabiertas.com/sobre-mi"
+        }]
+    };
+
     return (
         <div style={{ paddingTop: '100px', paddingBottom: '100px', minHeight: '80vh' }}>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             <article className="container" style={{ maxWidth: '800px' }}>
                 <RevealOnScroll>
                     <Link to="/blog" className="nav-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>

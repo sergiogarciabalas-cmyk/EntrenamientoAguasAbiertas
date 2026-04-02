@@ -9,9 +9,11 @@ import { Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 
 const heroImages = [
-    '/hero-bg.jpg',
-    '/hero-bg-2.png',
-    '/hero-bg-3.png'
+    '/carrusel-1.jpg',
+    '/carrusel-2.jpg',
+    '/carrusel-3.jpg',
+    '/carrusel-4.jpg',
+    '/carrusel-5.jpg'
 ];
 
 export const Home = () => {

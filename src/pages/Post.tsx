@@ -105,6 +105,7 @@ export const Post = () => {
     const [postData, setPostData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
     const [copied, setCopied] = useState(false);
+    const [sharing, setSharing] = useState(false);
 
     const extractText = (blocks: any[]): string => {
         if (!blocks || !Array.isArray(blocks)) return '';
@@ -116,8 +117,73 @@ export const Post = () => {
 
     const readingTime = Math.max(1, Math.ceil(extractText(postData?.body).split(/\s+/).length / 200));
     const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
-    const shareTitle = typeof window !== 'undefined' && postData ? encodeURIComponent(he.decode(postData.title)) : '';
+    const decodedTitle = postData ? he.decode(postData.title || '') : '';
+    const shareText = postData?.excerpt || decodedTitle;
     const encodedUrl = encodeURIComponent(currentUrl);
+    const encodedTitle = encodeURIComponent(decodedTitle);
+    const encodedShareText = encodeURIComponent(`${shareText} ${currentUrl}`.trim());
+    const canUseNativeShare = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
+
+    const shareLinks = {
+        whatsapp: `https://api.whatsapp.com/send?text=${encodedShareText}`,
+        x: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedTitle}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    };
+
+    const openSharePopup = (url: string, label: string) => {
+        if (typeof window === 'undefined') return;
+
+        const width = 640;
+        const height = 720;
+        const left = Math.max(0, Math.round(window.screenX + (window.outerWidth - width) / 2));
+        const top = Math.max(0, Math.round(window.screenY + (window.outerHeight - height) / 2));
+        const features = `width=${width},height=${height},left=${left},top=${top},toolbar=0,menubar=0,location=0,status=0,resizable=1,scrollbars=1`;
+
+        window.open(url, `share-${label}`, features);
+    };
+
+    const shareNatively = async () => {
+        if (!canUseNativeShare) return false;
+
+        try {
+            setSharing(true);
+            await navigator.share({
+                title: decodedTitle,
+                text: shareText,
+                url: currentUrl,
+            });
+            return true;
+        } catch (error) {
+            if ((error as Error)?.name !== 'AbortError') {
+                console.error('No se pudo abrir el panel de compartir nativo', error);
+            }
+            return false;
+        } finally {
+            setSharing(false);
+        }
+    };
+
+    const handleSocialShare = async (platform: keyof typeof shareLinks) => {
+        if (typeof window === 'undefined') return;
+
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+        // En móvil, Facebook comparte mejor a través del panel nativo que con su sharer web.
+        if (platform === 'facebook' && isMobile && canUseNativeShare) {
+            const shared = await shareNatively();
+            if (shared) return;
+        }
+
+        const targetUrl = shareLinks[platform];
+
+        if (isMobile) {
+            window.location.href = targetUrl;
+            return;
+        }
+
+        openSharePopup(targetUrl, platform);
+    };
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(currentUrl);
@@ -134,6 +200,7 @@ export const Post = () => {
         client.fetch(`
       *[_type == "post" && slug.current == $slug][0]{
         title,
+        excerpt,
         "authorName": author->name,
         "authorImage": author->image,
         mainImage,
@@ -237,18 +304,28 @@ export const Post = () => {
                             ¿Te ha servido? ¡Compártelo!
                         </h3>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-                            <a href={`https://wa.me/?text=${shareTitle}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#25D366', color: '#25D366' }}>
+                            {canUseNativeShare && (
+                                <button
+                                    onClick={shareNatively}
+                                    className="btn"
+                                    disabled={sharing}
+                                    style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--color-primary)', color: '#fff', opacity: sharing ? 0.8 : 1 }}
+                                >
+                                    <Share2 size={18} /> {sharing ? 'Abriendo...' : 'Compartir'}
+                                </button>
+                            )}
+                            <button onClick={() => void handleSocialShare('whatsapp')} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#25D366', color: '#25D366' }}>
                                 <MessageCircle size={18} /> WhatsApp
-                            </a>
-                            <a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#1DA1F2', color: '#1DA1F2' }}>
+                            </button>
+                            <button onClick={() => void handleSocialShare('x')} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#1DA1F2', color: '#1DA1F2' }}>
                                 <Twitter size={18} /> X (Twitter)
-                            </a>
-                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#1877F2', color: '#1877F2' }}>
+                            </button>
+                            <button onClick={() => void handleSocialShare('facebook')} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#1877F2', color: '#1877F2' }}>
                                 <Facebook size={18} /> Facebook
-                            </a>
-                            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#0A66C2', color: '#0A66C2' }}>
+                            </button>
+                            <button onClick={() => void handleSocialShare('linkedin')} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderColor: '#0A66C2', color: '#0A66C2' }}>
                                 <Linkedin size={18} /> LinkedIn
-                            </a>
+                            </button>
                             <button onClick={copyToClipboard} className="btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: copied ? '#2ecc71' : 'var(--color-surface)' }}>
                                 <LinkIcon size={18} /> {copied ? '¡Copiado!' : 'Copiar Link'}
                             </button>

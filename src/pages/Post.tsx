@@ -11,8 +11,8 @@ import { Newsletter } from '../components/Newsletter';
 import { resolveCmsLink } from '../utils/resolveCmsLink';
 
 const LEGACY_IMAGE_REPLACEMENTS: Record<string, string> = {
-    '/wp-content/uploads/entrenamiento-polarizado-1024x798.png': '/entrenamiento-polarizado-zonas.svg',
-    'https://www.entrenamientoaguasabiertas.com/wp-content/uploads/entrenamiento-polarizado-1024x798.png': '/entrenamiento-polarizado-zonas.svg',
+    '/wp-content/uploads/entrenamiento-polarizado-1024x798.png': '/entrenamiento-polarizado-zonas.png',
+    'https://www.entrenamientoaguasabiertas.com/wp-content/uploads/entrenamiento-polarizado-1024x798.png': '/entrenamiento-polarizado-zonas.png',
 };
 
 const replaceLegacyHtml = (html: string) => {

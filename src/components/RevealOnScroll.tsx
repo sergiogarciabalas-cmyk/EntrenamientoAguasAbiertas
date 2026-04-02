@@ -2,9 +2,24 @@ import { useState, useEffect, useRef } from 'react';
 
 export const RevealOnScroll = ({ children, className = "" }: any) => {
     const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
+        const element = ref.current;
+
+        if (!element) return;
+
+        // Fallback defensivo: nunca dejamos contenido importante oculto
+        // si el observer falla en ciertos navegadores móviles.
+        const fallbackTimeout = window.setTimeout(() => {
+            setIsVisible(true);
+        }, 250);
+
+        if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
+            setIsVisible(true);
+            return () => window.clearTimeout(fallbackTimeout);
+        }
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -17,20 +32,17 @@ export const RevealOnScroll = ({ children, className = "" }: any) => {
             }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
-            // Comprobación manual instantánea por si ya está en viewport
-            const rect = (ref.current as HTMLElement).getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                setIsVisible(true);
-            }
+        observer.observe(element);
+
+        // Comprobación manual instantánea por si ya está en viewport
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            setIsVisible(true);
         }
 
         return () => {
-            if (ref.current) {
-                // eslint-disable-next-line react-hooks/exhaustive-deps
-                observer.unobserve(ref.current);
-            }
+            window.clearTimeout(fallbackTimeout);
+            observer.disconnect();
         };
     }, [children]);
 

@@ -29,18 +29,21 @@ export default async function handler(req, res) {
                 // Reemplazamos violentamente -pero con precisión quirúrgica- las etiquetas 
                 // genéricas por las del propio artículo para el robot de WhatsApp.
                 
-                // Título
+                // Título y URL Canonical (CRÍTICO para Facebook)
+                const articleUrl = `https://www.entrenamientoaguasabiertas.com/blog/${slug}`;
+                html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/g, `<meta property="og:url" content="${articleUrl}" />`);
+                
                 if (post.title) {
                     html = html.replace(/<title>.*?<\/title>/g, `<title>${post.title} | Sergi García</title>`);
                     html = html.replace(/<meta property="og:title" content=".*?"\s*\/?>/g, `<meta property="og:title" content="${post.title}" />`);
-                    html = html.replace(/<meta name="twitter:title" content=".*?"\s*\/?>/g, `<meta name="twitter:title" content="${post.title}" />`);
+                    html = html.replace(/<meta (name|property)="twitter:title" content=".*?"\s*\/?>/g, `<meta property="twitter:title" content="${post.title}" />`);
                 }
                 
                 // Descripción corta (Subtítulo en WhatsApp)
                 if (post.excerpt) {
                    html = html.replace(/<meta name="description" content=".*?"\s*\/?>/g, `<meta name="description" content="${post.excerpt}" />`);
                    html = html.replace(/<meta property="og:description" content=".*?"\s*\/?>/g, `<meta property="og:description" content="${post.excerpt}" />`);
-                   html = html.replace(/<meta name="twitter:description" content=".*?"\s*\/?>/g, `<meta name="twitter:description" content="${post.excerpt}" />`);
+                   html = html.replace(/<meta (name|property)="twitter:description" content=".*?"\s*\/?>/g, `<meta property="twitter:description" content="${post.excerpt}" />`);
                 }
                 
                 // FOTO (La joya de la corona, previsualización de imagen)

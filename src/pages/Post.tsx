@@ -10,6 +10,21 @@ import { useSEO } from '../hooks/useSEO';
 import { Newsletter } from '../components/Newsletter';
 import { resolveCmsLink } from '../utils/resolveCmsLink';
 
+const LEGACY_IMAGE_REPLACEMENTS: Record<string, string> = {
+    '/wp-content/uploads/entrenamiento-polarizado-1024x798.png': '/entrenamiento-polarizado-zonas.svg',
+    'https://www.entrenamientoaguasabiertas.com/wp-content/uploads/entrenamiento-polarizado-1024x798.png': '/entrenamiento-polarizado-zonas.svg',
+};
+
+const replaceLegacyHtml = (html: string) => {
+    let normalizedHtml = html;
+
+    for (const [legacySrc, replacementSrc] of Object.entries(LEGACY_IMAGE_REPLACEMENTS)) {
+        normalizedHtml = normalizedHtml.split(legacySrc).join(replacementSrc);
+    }
+
+    return normalizedHtml.replace(/\sclass="[^"]*lazyload[^"]*"/gi, '');
+};
+
 const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
     return builder.image(source);
@@ -37,7 +52,7 @@ const ptComponents: any = {
                 <div
                     className="wp-raw-html"
                     style={{ margin: '2rem 0', width: '100%', overflowX: 'auto' }}
-                    dangerouslySetInnerHTML={{ __html: value.html }}
+                    dangerouslySetInnerHTML={{ __html: replaceLegacyHtml(value.html) }}
                 />
             );
         }

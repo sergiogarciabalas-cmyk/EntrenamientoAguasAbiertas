@@ -1,5 +1,7 @@
 export default async function handler(req, res) {
     const { slug } = req.query;
+    const siteName = 'Entrenamiento Aguas Abiertas';
+    const siteBrand = 'Sergi Swim Coach';
 
     try {
         // Hardcodeamos la URL de producción para evitar los bloqueos de Vercel SSO en los dominios de preview
@@ -32,11 +34,15 @@ export default async function handler(req, res) {
                 // Título y URL Canonical (CRÍTICO para Facebook)
                 const articleUrl = `https://www.entrenamientoaguasabiertas.com/blog/${slug}`;
                 html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/g, `<meta property="og:url" content="${articleUrl}" />`);
+                html = html.replace(/<meta property="og:site_name" content=".*?"\s*\/?>/g, `<meta property="og:site_name" content="${siteName}" />`);
+                html = html.replace(/<meta property="twitter:url" content=".*?"\s*\/?>/g, `<meta property="twitter:url" content="${articleUrl}" />`);
+                html = html.replace(/<meta property="twitter:site" content=".*?"\s*\/?>/g, `<meta property="twitter:site" content="@SergiSwimCoach" />`);
                 
                 if (post.title) {
-                    html = html.replace(/<title>.*?<\/title>/g, `<title>${post.title} | Sergi García</title>`);
+                    const titleWithBrand = `${post.title} | ${siteBrand}`;
+                    html = html.replace(/<title>.*?<\/title>/g, `<title>${titleWithBrand}</title>`);
                     html = html.replace(/<meta property="og:title" content=".*?"\s*\/?>/g, `<meta property="og:title" content="${post.title}" />`);
-                    html = html.replace(/<meta (name|property)="twitter:title" content=".*?"\s*\/?>/g, `<meta property="twitter:title" content="${post.title}" />`);
+                    html = html.replace(/<meta (name|property)="twitter:title" content=".*?"\s*\/?>/g, `<meta property="twitter:title" content="${titleWithBrand}" />`);
                 }
                 
                 // Descripción corta (Subtítulo en WhatsApp)
@@ -48,8 +54,11 @@ export default async function handler(req, res) {
                 
                 // FOTO (La joya de la corona, previsualización de imagen)
                 if (post.imageUrl) {
-                   html = html.replace(/<meta property="og:image" content=".*?"\s*\/?>/g, `<meta property="og:image" content="${post.imageUrl}?w=1200&h=630&fit=crop" />`);
-                   html = html.replace(/<meta property="twitter:image" content=".*?"\s*\/?>/g, `<meta property="twitter:image" content="${post.imageUrl}?w=1200&h=630&fit=crop" />`);
+                   const shareImageUrl = `${post.imageUrl}?w=1200&h=630&fit=crop`;
+                   html = html.replace(/<meta property="og:image" content=".*?"\s*\/?>/g, `<meta property="og:image" content="${shareImageUrl}" />`);
+                   html = html.replace(/<meta property="og:image:alt" content=".*?"\s*\/?>/g, `<meta property="og:image:alt" content="${post.title} | ${siteName}" />`);
+                   html = html.replace(/<meta property="twitter:image" content=".*?"\s*\/?>/g, `<meta property="twitter:image" content="${shareImageUrl}" />`);
+                   html = html.replace(/<meta property="twitter:image:alt" content=".*?"\s*\/?>/g, `<meta property="twitter:image:alt" content="${post.title} | ${siteName}" />`);
                 }
             }
         }

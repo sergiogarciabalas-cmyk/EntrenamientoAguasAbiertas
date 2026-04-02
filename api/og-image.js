@@ -27,6 +27,26 @@ export default async function handler(req, res) {
             ? `${sourceUrl}?w=1200&h=630&fit=crop&auto=format`
             : defaultOgImage;
 
+        if (req.method === 'HEAD') {
+            const headResponse = await fetch(imageUrl, { method: 'HEAD' });
+
+            if (!headResponse.ok) {
+                res.redirect(302, defaultOgImage);
+                return;
+            }
+
+            const contentType = headResponse.headers.get('content-type') || 'image/jpeg';
+            const contentLength = headResponse.headers.get('content-length');
+
+            res.setHeader('Content-Type', contentType);
+            if (contentLength) {
+                res.setHeader('Content-Length', contentLength);
+            }
+            res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+            res.status(200).end();
+            return;
+        }
+
         const imageResponse = await fetch(imageUrl);
 
         if (!imageResponse.ok) {

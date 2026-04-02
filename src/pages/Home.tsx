@@ -66,14 +66,24 @@ export const Home = () => {
                     ></div>
                 ))}
 
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.4) 0%, rgba(4,9,20,0.85) 50%, rgba(4,9,20,0.95) 100%)', zIndex: 1 }}></div>
+                <div
+                    style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: `
+                            radial-gradient(circle at 50% 22%, rgba(255, 214, 102, 0.18) 0%, rgba(255, 214, 102, 0) 32%),
+                            linear-gradient(to bottom, rgba(4, 9, 20, 0.14) 0%, rgba(4, 9, 20, 0.38) 48%, rgba(4, 9, 20, 0.68) 100%)
+                        `,
+                        zIndex: 1
+                    }}
+                ></div>
                 
                 <div className="container hero-grid" style={{ zIndex: 2, position: 'relative', gridTemplateColumns: 'minmax(0, 1fr)', height: '100%', display: 'flex', alignItems: 'center' }}>
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>
-                        <h1 className="fade-in-up" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: '1.2', marginBottom: '1rem', textShadow: '0 4px 10px rgba(0,0,0,0.5)' }}>
+                        <h1 className="fade-in-up" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: '1.2', marginBottom: '1rem', textShadow: '0 4px 14px rgba(0,0,0,0.35)' }}>
                             Entrenamiento de Aguas Abiertas <br/><span className="text-gradient">y Natación</span>
                         </h1>
-                        <p className="fade-in-up delay-1" style={{ fontSize: '1.1rem', color: 'rgba(255, 255, 255, 0.9)', margin: '0 auto 2.5rem', lineHeight: '1.5', maxWidth: '600px', textShadow: '0 2px 5px rgba(0,0,0,0.5)' }}>
+                        <p className="fade-in-up delay-1" style={{ fontSize: '1.1rem', color: 'rgba(255, 255, 255, 0.96)', margin: '0 auto 2.5rem', lineHeight: '1.5', maxWidth: '600px', textShadow: '0 2px 8px rgba(0,0,0,0.28)' }}>
                             Descubre las aguas abiertas a otro nivel con Sergi García. Mejora tu forma física, prepárate para retos y aprende a entrenar dentro y fuera del agua.
                         </p>
 

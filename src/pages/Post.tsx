@@ -8,6 +8,7 @@ import { ArrowLeft, Clock, Share2, MessageCircle, Link as LinkIcon, Twitter, Fac
 import he from 'he';
 import { useSEO } from '../hooks/useSEO';
 import { Newsletter } from '../components/Newsletter';
+import { resolveCmsLink } from '../utils/resolveCmsLink';
 
 const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
@@ -60,14 +61,23 @@ const ptComponents: any = {
     },
     marks: {
         link: ({ children, value }: any) => {
-            let href = value.href || '';
-            if (href.includes('/contact-us')) {
-                href = '/contacto';
+            const resolvedLink = resolveCmsLink(value.href);
+
+            if (resolvedLink.isInternal) {
+                return (
+                    <Link to={resolvedLink.href} style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>
+                        {children}
+                    </Link>
+                );
             }
-            const rel = !href.startsWith('/') ? 'noreferrer noopener' : undefined;
-            const target = !href.startsWith('/') ? '_blank' : undefined;
+
             return (
-                <a href={href} rel={rel} target={target} style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>
+                <a
+                    href={resolvedLink.href}
+                    rel={resolvedLink.openInNewTab ? 'noreferrer noopener' : undefined}
+                    target={resolvedLink.openInNewTab ? '_blank' : undefined}
+                    style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}
+                >
                     {children}
                 </a>
             );

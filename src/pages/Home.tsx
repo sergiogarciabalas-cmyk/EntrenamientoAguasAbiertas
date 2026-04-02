@@ -8,6 +8,12 @@ import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 
+const heroImages = [
+    '/hero-bg.jpg',
+    '/hero-bg-2.png',
+    '/hero-bg-3.png'
+];
+
 export const Home = () => {
     useSEO({
         title: 'Entrenador de Aguas Abiertas y Natación | Sergi García',
@@ -16,6 +22,14 @@ export const Home = () => {
 
     const [servicesData, setServicesData] = useState([]);
     const [testimonialsData, setTestimonialsData] = useState([]);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         client.fetch(`*[_type == "service"]`).then(setServicesData).catch(console.error);
@@ -31,16 +45,28 @@ export const Home = () => {
 
     return (
         <>
-            <section className="hero" id="inicio" style={{
-                backgroundImage: 'url("/hero-bg.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundAttachment: 'local'
-            }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.4) 0%, rgba(4,9,20,0.85) 50%, rgba(4,9,20,0.95) 100%)' }}></div>
+            <section className="hero" id="inicio" style={{ position: 'relative', overflow: 'hidden' }}>
+                {heroImages.map((src, index) => (
+                    <div
+                        key={src}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            backgroundImage: `url("${src}")`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            opacity: currentImageIndex === index ? 1 : 0,
+                            transition: 'opacity 1.5s ease-in-out, transform 8s ease-out',
+                            transform: currentImageIndex === index ? 'scale(1.03)' : 'scale(1)',
+                            zIndex: 0
+                        }}
+                    ></div>
+                ))}
+
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(4,9,20,0.4) 0%, rgba(4,9,20,0.85) 50%, rgba(4,9,20,0.95) 100%)', zIndex: 1 }}></div>
                 
-                <div className="container hero-grid" style={{ zIndex: 1, position: 'relative', gridTemplateColumns: 'minmax(0, 1fr)', height: '100%', display: 'flex', alignItems: 'center' }}>
+                <div className="container hero-grid" style={{ zIndex: 2, position: 'relative', gridTemplateColumns: 'minmax(0, 1fr)', height: '100%', display: 'flex', alignItems: 'center' }}>
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>
                         <h1 className="fade-in-up" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: '1.2', marginBottom: '1rem', textShadow: '0 4px 10px rgba(0,0,0,0.5)' }}>
                             Entrenamiento de Aguas Abiertas <br/><span className="text-gradient">y Natación</span>

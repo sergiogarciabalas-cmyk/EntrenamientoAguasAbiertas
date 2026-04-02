@@ -76,7 +76,7 @@ export default async function handler(req, res) {
                 html = html.replace(/<meta property="og:image" content=".*?"\s*\/?>/g, `<meta property="og:image" content="${shareImageUrl}" />`);
                 html = html.replace(/<meta property="og:image:alt" content=".*?"\s*\/?>/g, `<meta property="og:image:alt" content="${safeAlt}" />`);
                 html = html.replace(/<meta property="og:image:secure_url" content=".*?"\s*\/?>/g, `<meta property="og:image:secure_url" content="${shareImageUrl}" />`);
-                html = html.replace(/<meta property="og:image:type" content=".*?"\s*\/?>/g, '<meta property="og:image:type" content="image/png" />');
+                html = html.replace(/<meta property="og:image:type" content=".*?"\s*\/?>/g, '<meta property="og:image:type" content="image/jpeg" />');
                 html = html.replace(/<meta property="og:image:width" content=".*?"\s*\/?>/g, '<meta property="og:image:width" content="1200" />');
                 html = html.replace(/<meta property="og:image:height" content=".*?"\s*\/?>/g, '<meta property="og:image:height" content="630" />');
                 html = html.replace(/<meta (name|property)="twitter:image" content=".*?"\s*\/?>/g, `<meta name="twitter:image" content="${shareImageUrl}" />`);

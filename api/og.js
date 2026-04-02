@@ -2,11 +2,8 @@ export default async function handler(req, res) {
     const { slug } = req.query;
 
     try {
-        // En Producción, Vercel nos da su dominio a través de VERCEL_URL. 
-        // Si no está (desarrollo local), usamos el host de la petición original.
-        const host = process.env.VERCEL_URL || req.headers.host;
-        const protocol = host.includes('localhost') ? 'http' : 'https';
-        const indexUrl = `${protocol}://${host}/index.html`;
+        // Hardcodeamos la URL de producción para evitar los bloqueos de Vercel SSO en los dominios de preview
+        const indexUrl = `https://www.entrenamientoaguasabiertas.com/index.html`;
         
         // Obtenemos el esqueleto de la página original a ciegas
         const resp = await fetch(indexUrl);
@@ -49,7 +46,7 @@ export default async function handler(req, res) {
                 // FOTO (La joya de la corona, previsualización de imagen)
                 if (post.imageUrl) {
                    html = html.replace(/<meta property="og:image" content=".*?"\s*\/?>/g, `<meta property="og:image" content="${post.imageUrl}?w=1200&h=630&fit=crop" />`);
-                   html = html.replace(/<meta name="twitter:image" content=".*?"\s*\/?>/g, `<meta name="twitter:image" content="${post.imageUrl}?w=1200&h=630&fit=crop" />`);
+                   html = html.replace(/<meta property="twitter:image" content=".*?"\s*\/?>/g, `<meta property="twitter:image" content="${post.imageUrl}?w=1200&h=630&fit=crop" />`);
                 }
             }
         }

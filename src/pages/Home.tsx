@@ -33,7 +33,7 @@ export const Home = () => {
         <>
             <section className="hero" id="inicio" style={{
                 backgroundImage: 'url("/hero-bg.jpg")',
-                backgroundSize: 'contain',
+                backgroundSize: 'cover',
                 backgroundPosition: 'top center',
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'local'

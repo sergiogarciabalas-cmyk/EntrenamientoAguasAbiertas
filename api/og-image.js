@@ -42,7 +42,7 @@ export default async function handler(req, res) {
             if (contentLength) {
                 res.setHeader('Content-Length', contentLength);
             }
-            res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+            res.setHeader('Cache-Control', 'no-store, max-age=0');
             res.status(200).end();
             return;
         }
@@ -59,7 +59,7 @@ export default async function handler(req, res) {
 
         res.setHeader('Content-Type', imageResponse.headers.get('content-type') || 'image/jpeg');
         res.setHeader('Content-Length', String(buffer.length));
-        res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+        res.setHeader('Cache-Control', 'no-store, max-age=0');
         res.status(200).send(buffer);
     } catch (error) {
         console.error('Error in api/og-image:', error);

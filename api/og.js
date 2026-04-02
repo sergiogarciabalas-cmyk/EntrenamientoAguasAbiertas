@@ -70,7 +70,7 @@ export default async function handler(req, res) {
                 
                 // FOTO (La joya de la corona, previsualización de imagen)
                 const shareImageUrl = post.imageUrl
-                    ? `${siteUrl}/api/og-image?slug=${encodeURIComponent(slug)}`
+                    ? `${siteUrl}/api/og-image?slug=${encodeURIComponent(slug)}&v=20260402`
                     : defaultOgImage;
                 const safeAlt = escapeHtmlAttr(`${post.title || siteBrand} | ${siteName}`);
                 html = html.replace(/<meta property="og:image" content=".*?"\s*\/?>/g, `<meta property="og:image" content="${shareImageUrl}" />`);

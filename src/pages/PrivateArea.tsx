@@ -54,18 +54,18 @@ export const PrivateArea = () => {
                     </div>
                 </RevealOnScroll>
 
-                <div className="services-grid" style={{ 
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-                    maxWidth: '800px', 
+                <div className="services-grid" style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    maxWidth: '800px',
                     margin: '0 auto',
-                    gap: '2rem' 
+                    gap: '2rem'
                 }}>
-                    
-                    {/* App Swintific - Estado Próximamente */}
+
+                    {/* App Swimtific - Estado Próximamente */}
                     <RevealOnScroll className="delay-1">
-                        <div className="service-card glass" style={{ 
-                            textAlign: 'center', 
-                            alignItems: 'center', 
+                        <div className="service-card glass" style={{
+                            textAlign: 'center',
+                            alignItems: 'center',
                             height: '100%',
                             position: 'relative',
                             display: 'flex',
@@ -74,15 +74,15 @@ export const PrivateArea = () => {
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
                                 <ExternalLink size={32} />
                             </div>
-                            <h3>Swintific</h3>
+                            <h3>Swimtific</h3>
                             <p>La nueva plataforma avanzada para el análisis de tus entrenamientos de natación y técnica.</p>
-                            
+
                             <div style={{ marginTop: 'auto', width: '100%', paddingTop: '1.5rem' }}>
-                                <button 
-                                    disabled 
-                                    style={{ 
-                                        width: '100%', 
-                                        padding: '0.75rem', 
+                                <button
+                                    disabled
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
                                         borderRadius: '0.5rem',
                                         border: '1px solid rgba(56, 189, 248, 0.2)',
                                         background: 'rgba(56, 189, 248, 0.05)',
@@ -94,9 +94,9 @@ export const PrivateArea = () => {
                                 >
                                     Disponible Próximamente
                                 </button>
-                                <p style={{ 
-                                    fontSize: '0.75rem', 
-                                    marginTop: '0.75rem', 
+                                <p style={{
+                                    fontSize: '0.75rem',
+                                    marginTop: '0.75rem',
                                     color: 'var(--color-primary)',
                                     fontStyle: 'italic'
                                 }}>
@@ -108,9 +108,9 @@ export const PrivateArea = () => {
 
                     {/* Newsletter Exclusiva */}
                     <RevealOnScroll className="delay-2">
-                        <div className="service-card glass" style={{ 
-                            textAlign: 'center', 
-                            alignItems: 'center', 
+                        <div className="service-card glass" style={{
+                            textAlign: 'center',
+                            alignItems: 'center',
                             height: '100%',
                             position: 'relative', // Importante para el clic
                             zIndex: 10            // Asegura que esté por encima de la animación
@@ -119,7 +119,7 @@ export const PrivateArea = () => {
                                 <Mail size={32} />
                             </div>
                             <h3>Newsletter Exclusiva</h3>
-                            
+
                             {status === 'success' ? (
                                 <div style={{ padding: '1rem', color: 'var(--color-primary)' }}>
                                     <p>¡Gracias por suscribirte!</p>
@@ -128,22 +128,22 @@ export const PrivateArea = () => {
                             ) : (
                                 <>
                                     <p>Recibe consejos técnicos y acceso prioritario a los clínics.</p>
-                                    
-                                    <form onSubmit={handleSubscribe} style={{ 
-                                        marginTop: '1.5rem', 
-                                        display: 'flex', 
-                                        flexDirection: 'column', 
-                                        gap: '1rem', 
+
+                                    <form onSubmit={handleSubscribe} style={{
+                                        marginTop: '1.5rem',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: '1rem',
                                         width: '100%',
                                         position: 'relative',
                                         zIndex: 20
                                     }}>
-                                        <input 
-                                            type="email" 
+                                        <input
+                                            type="email"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            placeholder="Tu email..." 
-                                            required 
+                                            placeholder="Tu email..."
+                                            required
                                             style={{
                                                 padding: '0.75rem 1rem',
                                                 borderRadius: '0.5rem',
@@ -153,12 +153,12 @@ export const PrivateArea = () => {
                                                 width: '100%',
                                             }}
                                         />
-                                        
+
                                         <div style={{ display: 'flex', gap: '0.5rem', textAlign: 'left', alignItems: 'flex-start' }}>
-                                            <input 
-                                                type="checkbox" 
-                                                id="privacy-news" 
-                                                required 
+                                            <input
+                                                type="checkbox"
+                                                id="privacy-news"
+                                                required
                                                 checked={privacyAccepted}
                                                 onChange={(e) => setPrivacyAccepted(e.target.checked)}
                                                 style={{ marginTop: '0.2rem', cursor: 'pointer' }}
@@ -168,13 +168,13 @@ export const PrivateArea = () => {
                                             </label>
                                         </div>
 
-                                        <button 
-                                            type="submit" 
-                                            className="btn btn-outline" 
+                                        <button
+                                            type="submit"
+                                            className="btn btn-outline"
                                             disabled={isSubmitting || !privacyAccepted}
-                                            style={{ 
-                                                width: '100%', 
-                                                justifyContent: 'center', 
+                                            style={{
+                                                width: '100%',
+                                                justifyContent: 'center',
                                                 opacity: (!privacyAccepted || isSubmitting) ? 0.5 : 1,
                                                 cursor: privacyAccepted ? 'pointer' : 'not-allowed'
                                             }}

@@ -1,0 +1,371 @@
+/* Scoped Styles for the Premium Theme Proposal */
+
+/* Hide global navbar and WhatsApp when on premium route */
+body:has(.premium-theme) .navbar {
+  display: none !important;
+}
+
+.premium-theme {
+  --color-bg: #020617; /* Slate 950 */
+  --color-surface: rgba(15, 23, 42, 0.45);
+  --color-surface-light: rgba(30, 41, 59, 0.6);
+  --color-primary: #00f2fe;
+  --color-primary-hover: #00dcf5;
+  --color-secondary: #4facfe;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-accent: #f59e0b;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* easeOutExpo smooth transition */
+
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Scoped typography overrides */
+.premium-theme h1,
+.premium-theme h2,
+.premium-theme h3,
+.premium-theme h4,
+.premium-theme h5,
+.premium-theme h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.premium-theme p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.premium-theme .text-gradient {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Glassmorphism 2.0 cards with upper reflective border */
+.premium-theme .glass {
+  background: var(--color-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 15px 35px -10px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+}
+
+/* Smooth Premium Buttons */
+.premium-theme .btn {
+  border-radius: 12px; /* Smooth rounded corners */
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.85rem;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+
+.premium-theme .btn-primary {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #020617;
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.2);
+}
+
+.premium-theme .btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 242, 254, 0.4);
+  background: linear-gradient(135deg, #00dcf5 0%, #3b9cfc 100%);
+}
+
+.premium-theme .btn-outline {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.premium-theme .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Scoped layout padding */
+.premium-theme .section {
+  padding: 7rem 0; /* More breathing room */
+}
+
+.premium-theme .section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.premium-theme .section-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 4rem;
+}
+
+/* Capsule Floating Navbar */
+.premium-theme .navbar-premium-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition: var(--transition);
+}
+
+.premium-theme .navbar-premium-wrapper.scrolled {
+  padding: 0.85rem 0;
+}
+
+.premium-theme .navbar-premium-wrapper.scrolled .nav-capsule {
+  max-width: 950px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 15px 35px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 0.5rem 2rem;
+  margin: 0 auto;
+}
+
+.premium-theme .nav-capsule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: var(--transition);
+  padding: 0 2rem;
+}
+
+/* Scroll progress indicator line */
+.premium-theme .scroll-progress-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  transition: width 0.1s ease-out;
+  z-index: 101;
+}
+
+/* Interactive service cards with inner glow */
+.premium-theme .service-card {
+  padding: 3.5rem 2.5rem;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.premium-theme .service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(0, 242, 254, 0.35);
+  box-shadow: 
+    0 25px 50px -15px rgba(0, 0, 0, 0.6),
+    0 0 35px rgba(0, 242, 254, 0.06),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+.premium-theme .service-icon {
+  width: 58px;
+  height: 58px;
+  background: rgba(0, 242, 254, 0.07);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+  color: var(--color-primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: var(--transition);
+}
+
+.premium-theme .service-card:hover .service-icon {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #020617;
+  border-color: transparent;
+  transform: scale(1.1) rotate(4deg);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.35);
+}
+
+.premium-theme .service-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.premium-theme .service-card p {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Slide Progress indicators under hero */
+.premium-theme .indicator-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.premium-theme .indicator-bar {
+  width: 35px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+.premium-theme .indicator-bar.active {
+  width: 55px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.premium-theme .indicator-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  width: 0%;
+}
+
+.premium-theme .indicator-bar.active .indicator-progress {
+  animation: progressFill 5s linear forwards;
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Youtube block upgraded to Dark Cinema frame */
+.premium-theme .youtube-cinema-card {
+  background: linear-gradient(145deg, #090d1f 0%, #030712 100%);
+  border: 1px solid rgba(239, 68, 68, 0.15); /* Red opacity border */
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  box-shadow: 
+    0 30px 60px -20px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(239, 68, 68, 0.02);
+  text-align: center;
+  max-width: 850px;
+  margin: 5rem auto 0;
+  transition: var(--transition);
+}
+
+.premium-theme .youtube-cinema-card:hover {
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: 
+    0 35px 70px -15px rgba(0, 0, 0, 0.8),
+    0 0 50px rgba(239, 68, 68, 0.06);
+  transform: translateY(-4px);
+}
+
+.premium-theme .youtube-btn-neon {
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.03) !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.05);
+}
+
+.premium-theme .youtube-btn-neon:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+/* Testimonials upgrades */
+.premium-theme .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+.premium-theme .testimonial-card {
+  padding: 3rem 2.5rem;
+  position: relative;
+}
+
+.premium-theme .testimonial-avatar-wrapper {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  padding: 2.5px;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.premium-theme .testimonial-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+}
+
+.premium-theme .author-info h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.premium-theme .achievement-tag {
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  color: #00f2fe;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+/* CTA Box Premium Gradient */
+.premium-theme .cta-box {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(79, 172, 254, 0.05) 100%);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+  padding: 5rem 3rem;
+}

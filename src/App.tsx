@@ -6,15 +6,15 @@ import { CookieBanner } from './components/CookieBanner'; // 1. Importamos el ba
 
 function App() {
   return (
-    <>
+    <div className="premium-theme">
       <Navbar />
       <main>
         <Outlet />
       </main>
       <Footer />
       <WhatsAppButton />
-      <CookieBanner /> {/* 2. Lo colocamos aquí */}
-    </>
+      <CookieBanner />
+    </div>
   );
 }
 

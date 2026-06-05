@@ -3,6 +3,7 @@ import {
     Waves, ArrowRight,
     Users, MapPin, MessageCircle, Youtube, Star
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { client } from '../sanity';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { useSEO } from '../hooks/useSEO';
@@ -105,9 +106,9 @@ export const Home = () => {
                         </p>
 
                         <div className="hero-actions fade-in-up delay-3" style={{ justifyContent: 'center' }}>
-                            <button className="btn btn-primary" style={{ padding: '1rem 2.2rem', fontSize: '1.05rem' }}>
+                            <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.2rem', fontSize: '1.05rem', textDecoration: 'none' }}>
                                 Empieza hoy <ArrowRight size={18} />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -161,9 +162,9 @@ export const Home = () => {
                                             </div>
                                             <h3>{service.title}</h3>
                                             <p>{service.description}</p>
-                                            <a href="#" onClick={(e) => e.preventDefault()} className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                            <Link to={`/servicios/${service.slug?.current || service.slug || ''}`} className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                                 {service.linkText || 'Saber más'} <ArrowRight size={16} />
-                                            </a>
+                                            </Link>
                                         </div>
                                     </RevealOnScroll>
                                 );
@@ -180,9 +181,9 @@ export const Home = () => {
                                         </div>
                                         <h3>Planes de entrenamiento</h3>
                                         <p>Preparación individualizada o en grupo. Diseñados científicamente adaptándose a tus horarios, objetivos de mar y ritmo.</p>
-                                        <a href="#" onClick={(e) => e.preventDefault()} className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <Link to="/plan-entrenamiento-online-o-mixto" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Ver planes <ArrowRight size={16} />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </RevealOnScroll>
 
@@ -196,9 +197,9 @@ export const Home = () => {
                                         </div>
                                         <h3>Clínics presenciales</h3>
                                         <p>Sesiones técnicas intensivas en el mar. Grabación subacuática HD, análisis de brazada, corrección en directo y seguridad.</p>
-                                        <a href="#" onClick={(e) => e.preventDefault()} className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <Link to="/clinics-presenciales" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Reservar clínic <ArrowRight size={16} />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </RevealOnScroll>
 
@@ -212,9 +213,9 @@ export const Home = () => {
                                         </div>
                                         <h3>Asesoría de entrenamiento</h3>
                                         <p>Sesión individual para resolver tus dudas sobre material técnico, alimentación, ritmo cardíaco y estrategia de travesías.</p>
-                                        <a href="#" onClick={(e) => e.preventDefault()} className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <Link to="/asesoramiento-entrenamiento" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Consultar dudas <ArrowRight size={16} />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </RevealOnScroll>
                             </>
@@ -398,9 +399,9 @@ export const Home = () => {
                             <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', marginBottom: '1.5rem' }}>Empieza a entrenar <span className="text-gradient">hoy conmigo</span></h2>
                             <p style={{ fontSize: '1.1rem', color: '#94a3b8', maxWidth: '600px', margin: '0 auto 2.5rem' }}>Hablemos de tus metas en el agua, evalúemos tu técnica y tracemos un plan científico a tu medida.</p>
                             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <button className="btn btn-primary" style={{ padding: '1rem 2.2rem' }}>
+                                <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.2rem', textDecoration: 'none' }}>
                                     Enviar Mensaje <MessageCircle size={18} />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </RevealOnScroll>

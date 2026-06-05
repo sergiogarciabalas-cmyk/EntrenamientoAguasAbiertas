@@ -1,7 +1,9 @@
 {
   "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/og-cache/:path*", "destination": "/og-cache/:path*" },
     { "source": "/blog/:slug", "destination": "/api/og?slug=:slug" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+

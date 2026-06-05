@@ -7,13 +7,13 @@ import App from './App.tsx'
 import { Home } from './pages/Home.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import { Analytics } from '@vercel/analytics/react'
-const PrivateArea = lazy(() => import('./pages/PrivateArea.tsx').then(m => ({ default: m.PrivateArea })))
-const Blog = lazy(() => import('./pages/Blog.tsx').then(m => ({ default: m.Blog })))
-const Post = lazy(() => import('./pages/Post.tsx').then(m => ({ default: m.Post })))
-const Page = lazy(() => import('./pages/Page.tsx').then(m => ({ default: m.Page })))
-const Contact = lazy(() => import('./pages/Contact.tsx').then(m => ({ default: m.Contact })))
-const ServiceDetail = lazy(() => import('./pages/ServiceDetail.tsx').then(m => ({ default: m.ServiceDetail })))
-const NotFound = lazy(() => import('./pages/NotFound.tsx').then(m => ({ default: m.NotFound })))
+import { PrivateArea } from './pages/PrivateArea.tsx'
+import { Blog } from './pages/Blog.tsx'
+import { Post } from './pages/Post.tsx'
+import { Page } from './pages/Page.tsx'
+import { Contact } from './pages/Contact.tsx'
+import { ServiceDetail } from './pages/ServiceDetail.tsx'
+import { NotFound } from './pages/NotFound.tsx'
 const StudioPage = lazy(() => import('./Studio.tsx'))
 
 createRoot(document.getElementById('root')!).render(

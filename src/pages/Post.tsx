@@ -307,9 +307,9 @@ export const Post = () => {
                             {canUseNativeShare && (
                                 <button
                                     onClick={shareNatively}
-                                    className="btn"
+                                    className="btn btn-primary"
                                     disabled={sharing}
-                                    style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--color-primary)', color: '#fff', opacity: sharing ? 0.8 : 1 }}
+                                    style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: sharing ? 0.8 : 1 }}
                                 >
                                     <Share2 size={18} /> {sharing ? 'Abriendo...' : 'Compartir'}
                                 </button>

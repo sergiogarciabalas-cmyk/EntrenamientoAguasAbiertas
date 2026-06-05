@@ -9,6 +9,7 @@ body:has(.premium-theme) .navbar {
   --color-bg: #020617; /* Slate 950 */
   --color-surface: rgba(15, 23, 42, 0.45);
   --color-surface-light: rgba(30, 41, 59, 0.6);
+  --color-background-elevated: rgba(15, 23, 42, 0.55);
   --color-primary: #00f2fe;
   --color-primary-hover: #00dcf5;
   --color-secondary: #4facfe;

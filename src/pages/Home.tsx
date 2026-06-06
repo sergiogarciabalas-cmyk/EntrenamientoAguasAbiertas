@@ -181,7 +181,7 @@ export const Home = () => {
                                         </div>
                                         <h3>Planes de entrenamiento</h3>
                                         <p>Preparación individualizada o en grupo. Diseñados científicamente adaptándose a tus horarios, objetivos de mar y ritmo.</p>
-                                        <Link to="/servicios/plan-entrenamiento-online-o-mixto" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <Link to="/servicios" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Ver planes <ArrowRight size={16} />
                                         </Link>
                                     </div>
@@ -213,7 +213,7 @@ export const Home = () => {
                                         </div>
                                         <h3>Asesoría de entrenamiento</h3>
                                         <p>Sesión individual para resolver tus dudas sobre material técnico, alimentación, ritmo cardíaco y estrategia de travesías.</p>
-                                        <Link to="/servicios/asesoramiento-entrenamiento" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <Link to="/contacto" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Consultar dudas <ArrowRight size={16} />
                                         </Link>
                                     </div>

@@ -91,7 +91,7 @@ const ptComponents = {
     },
     marks: {
         link: ({ children, value }: any) => {
-            const resolvedLink = resolveCmsLink(value.href);
+            const resolvedLink = resolveCmsLink(value?.href);
 
             if (resolvedLink.isInternal) {
                 return (

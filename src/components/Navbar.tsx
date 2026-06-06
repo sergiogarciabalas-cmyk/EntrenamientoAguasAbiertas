@@ -55,11 +55,11 @@ export const Navbar = () => {
                                 minWidth: '220px', padding: '1rem', borderRadius: '0.5rem',
                                 boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 100
                             }}>
-                                <Link to="/plan-entrenamiento-online-o-mixto" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Plan Entrenamiento Online</Link>
-                                <Link to="/planes-entrenamiento-en-grupo" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Planes en Grupo</Link>
-                                <Link to="/clinics-presenciales" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Clínics Presenciales</Link>
-                                <Link to="/asesoramiento-entrenamiento" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Asesoramiento</Link>
-                                <Link to="/informe-tecnico-y-antropometria" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Informe Técnico y Antrop.</Link>
+                                <Link to="/servicios/plan-entrenamiento-online-o-mixto" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Plan Entrenamiento Online</Link>
+                                <Link to="/servicios/planes-entrenamiento-en-grupo" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Planes en Grupo</Link>
+                                <Link to="/servicios/clinics-presenciales" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Clínics Presenciales</Link>
+                                <Link to="/servicios/asesoramiento-entrenamiento" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Asesoramiento</Link>
+                                <Link to="/servicios/informe-tecnico-y-antropometria" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Informe Técnico y Antrop.</Link>
                             </div>
                         </div>
                         <Link to="/blog" className="nav-link">Blog</Link>

@@ -12,8 +12,15 @@ export default async function handler(req, res) {
     try {
         let query, params;
         if (req.method === 'POST') {
-            // Vercel parses JSON bodies automatically
-            const body = req.body || {};
+            let body = req.body;
+            if (typeof body === 'string') {
+                try {
+                    body = JSON.parse(body);
+                } catch (e) {
+                    body = {};
+                }
+            }
+            body = body || {};
             query = body.query;
             params = body.params;
         } else {

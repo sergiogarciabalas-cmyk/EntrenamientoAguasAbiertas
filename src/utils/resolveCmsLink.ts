@@ -16,6 +16,11 @@ const DIRECT_ROUTE_MAP = new Map<string, string>([
   ['/politica-de-cookies', '/cookies'],
   ['/services', '/servicios'],
   ['/blog', '/blog'],
+  ['/plan-entrenamiento-online-o-mixto', '/servicios/plan-entrenamiento-online-o-mixto'],
+  ['/clinics-presenciales', '/servicios/clinics-presenciales'],
+  ['/asesoramiento-entrenamiento', '/servicios/asesoramiento-entrenamiento'],
+  ['/planes-entrenamiento-en-grupo', '/servicios/planes-entrenamiento-en-grupo'],
+  ['/informe-tecnico-y-antropometria', '/servicios/informe-tecnico-y-antropometria'],
 ]);
 
 type ResolvedCmsLink = {

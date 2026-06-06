@@ -153,7 +153,7 @@ export const Home = () => {
 
                                 return (
                                     <RevealOnScroll key={service._id || index} className={`delay-${(index % 3) + 1}`}>
-                                        <div className="service-card glass">
+                                        <Link to={`/servicios/${service.slug?.current || service.slug || ''}`} className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                                 <div className="service-icon">{renderIcon()}</div>
                                                 <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#94a3b8', letterSpacing: '0.05em' }}>
@@ -162,17 +162,17 @@ export const Home = () => {
                                             </div>
                                             <h3>{service.title}</h3>
                                             <p>{service.description}</p>
-                                            <Link to={`/servicios/${service.slug?.current || service.slug || ''}`} className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                            <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                                 {service.linkText || 'Saber más'} <ArrowRight size={16} />
-                                            </Link>
-                                        </div>
+                                            </span>
+                                        </Link>
                                     </RevealOnScroll>
                                 );
                             })
                         ) : (
                             <>
                                 <RevealOnScroll className="delay-1">
-                                    <div className="service-card glass">
+                                    <Link to="/servicios/plan-entrenamiento-online-o-mixto" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                             <div className="service-icon"><Users size={28} /></div>
                                             <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#94a3b8', letterSpacing: '0.05em' }}>
@@ -181,14 +181,14 @@ export const Home = () => {
                                         </div>
                                         <h3>Planes de entrenamiento</h3>
                                         <p>Preparación individualizada o en grupo. Diseñados científicamente adaptándose a tus horarios, objetivos de mar y ritmo.</p>
-                                        <Link to="/servicios" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Ver planes <ArrowRight size={16} />
-                                        </Link>
-                                    </div>
+                                        </span>
+                                    </Link>
                                 </RevealOnScroll>
 
                                 <RevealOnScroll className="delay-2">
-                                    <div className="service-card glass">
+                                    <Link to="/servicios/clinics-presenciales" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                             <div className="service-icon"><MapPin size={28} /></div>
                                             <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#94a3b8', letterSpacing: '0.05em' }}>
@@ -197,14 +197,14 @@ export const Home = () => {
                                         </div>
                                         <h3>Clínics presenciales</h3>
                                         <p>Sesiones técnicas intensivas en el mar. Grabación subacuática HD, análisis de brazada, corrección en directo y seguridad.</p>
-                                        <Link to="/servicios/clinics-presenciales" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Reservar clínic <ArrowRight size={16} />
-                                        </Link>
-                                    </div>
+                                        </span>
+                                    </Link>
                                 </RevealOnScroll>
 
                                 <RevealOnScroll className="delay-3">
-                                    <div className="service-card glass">
+                                    <Link to="/servicios/asesoramiento-entrenamiento" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                             <div className="service-icon"><MessageCircle size={28} /></div>
                                             <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#94a3b8', letterSpacing: '0.05em' }}>
@@ -213,10 +213,10 @@ export const Home = () => {
                                         </div>
                                         <h3>Asesoría de entrenamiento</h3>
                                         <p>Sesión individual para resolver tus dudas sobre material técnico, alimentación, ritmo cardíaco y estrategia de travesías.</p>
-                                        <Link to="/contacto" className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                        <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
                                             Consultar dudas <ArrowRight size={16} />
-                                        </Link>
-                                    </div>
+                                        </span>
+                                    </Link>
                                 </RevealOnScroll>
                             </>
                         )}

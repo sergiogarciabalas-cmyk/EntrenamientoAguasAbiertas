@@ -7,7 +7,8 @@ import { useSEO } from '../hooks/useSEO';
 export const PrivateArea = () => {
     useSEO({
         title: 'Área Privada para Alumnos | Sergi García',
-        description: 'Accede a tus planes de entrenamiento, contenido exclusivo y seguimiento de progreso.'
+        description: 'Accede a tus planes de entrenamiento, contenido exclusivo y seguimiento de progreso.',
+        canonical: 'https://entrenamientoaguasabiertas.com/area-privada'
     });
 
     const [email, setEmail] = useState('');

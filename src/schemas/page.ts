@@ -20,6 +20,12 @@ export default {
             validation: (Rule: any) => Rule.required(),
         },
         {
+            name: 'description',
+            title: 'Descripción SEO (Meta Description)',
+            type: 'text',
+            description: 'Resumen de la página de entre 140 y 160 caracteres para Google y redes sociales.',
+        },
+        {
             name: 'content',
             title: 'Contenido',
             type: 'array',

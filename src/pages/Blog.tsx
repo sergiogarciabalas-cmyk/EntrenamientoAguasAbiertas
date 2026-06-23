@@ -14,7 +14,8 @@ function urlFor(source: any) {
 export const Blog = () => {
     useSEO({
         title: 'Blog de Natación y Aguas Abiertas | Sergi García',
-        description: 'Consejos, noticias, artículos de técnica y rutinas sobre entrenamiento en aguas abiertas y natación.'
+        description: 'Consejos, noticias, artículos de técnica y rutinas sobre entrenamiento en aguas abiertas y natación.',
+        canonical: 'https://entrenamientoaguasabiertas.com/blog'
     });
 
     const [posts, setPosts] = useState([]);

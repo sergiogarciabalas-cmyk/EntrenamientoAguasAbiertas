@@ -121,9 +121,31 @@ export const ServiceDetail = ({ fixedSlug }: { fixedSlug?: string }) => {
     const [service, setService] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
+    const parsedPrice = service?.price ? service.price.match(/\d+/) : null;
+    const serviceSchema = service ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": he.decode(service.title || ''),
+        "description": service.description || '',
+        "provider": {
+            "@type": "SportsClub",
+            "name": "Sergi Swim Coach - Entrenamiento Aguas Abiertas",
+            "url": "https://entrenamientoaguasabiertas.com/"
+        },
+        ...(parsedPrice ? {
+            "offers": {
+                "@type": "Offer",
+                "price": parsedPrice[0],
+                "priceCurrency": "EUR"
+            }
+        } : {})
+    } : undefined;
+
     useSEO({
         title: service ? `${he.decode(service.title || '')} | Sergi García` : 'Cargando servicio...',
-        description: service?.description || 'Planes de entrenamiento y clinics presenciales en aguas abiertas.'
+        description: service?.description || 'Planes de entrenamiento y clinics presenciales en aguas abiertas.',
+        canonical: service ? `https://entrenamientoaguasabiertas.com/servicios/${slug}` : undefined,
+        schema: serviceSchema
     });
 
     useEffect(() => {

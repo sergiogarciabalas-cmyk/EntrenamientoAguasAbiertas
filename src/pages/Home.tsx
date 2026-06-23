@@ -17,9 +17,59 @@ const heroImages = [
 ];
 
 export const Home = () => {
+    const homeSchema = {
+        "@context": "https://schema.org",
+        "@type": "SportsClub",
+        "name": "Sergi Swim Coach - Entrenamiento Aguas Abiertas",
+        "image": "https://entrenamientoaguasabiertas.com/og-image.jpg",
+        "@id": "https://entrenamientoaguasabiertas.com/#sportsclub",
+        "url": "https://entrenamientoaguasabiertas.com/",
+        "telephone": "+34627767412",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mataró y alrededores",
+            "addressLocality": "Mataró",
+            "postalCode": "08301",
+            "addressRegion": "Barcelona",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.5381,
+            "longitude": 2.4447
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "21:00"
+        },
+        "sameAs": [
+            "https://instagram.com/SergiSwimCoach",
+            "https://www.youtube.com/channel/UC6-Hg55x3IAfAY_NcOkouAg"
+        ],
+        "coach": {
+            "@type": "Person",
+            "name": "Sergi García Balastegui",
+            "jobTitle": "Entrenador de Aguas Abiertas y Natación de Alto Rendimiento",
+            "url": "https://entrenamientoaguasabiertas.com/sobre-mi"
+        }
+    };
+
     useSEO({
         title: 'Entrenador de Aguas Abiertas y Natación | Sergi García',
-        description: 'Descubre las aguas abiertas a otro nivel con Sergi García. Mejora tu forma física mediante la natación y prepárate para retos de aguas abiertas.'
+        description: 'Descubre las aguas abiertas a otro nivel con Sergi García. Mejora tu forma física mediante la natación y prepárate para retos de aguas abiertas.',
+        canonical: 'https://entrenamientoaguasabiertas.com/',
+        schema: homeSchema
     });
 
     const [servicesData, setServicesData] = useState([]);

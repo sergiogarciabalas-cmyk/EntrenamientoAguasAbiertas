@@ -1,21 +1,36 @@
 import { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Newsletter = () => {
     const [email, setEmail] = useState('');
+    const [privacyAccepted, setPrivacyAccepted] = useState(false);
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const FORMSPREE_URL = "https://formspree.io/f/xvzwrzeb";
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!email) return;
+        if (!email || !privacyAccepted) return;
         
         setStatus('loading');
-        
-        // Simulación de envío hasta conectar con una plataforma real
-        setTimeout(() => {
-            setStatus('success');
-            setEmail('');
-        }, 1500);
+        try {
+            const response = await fetch(FORMSPREE_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ email, subject: "Nueva suscripción Newsletter General" }),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setEmail('');
+                setPrivacyAccepted(false);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            setStatus('error');
+        }
     };
 
     return (
@@ -70,34 +85,64 @@ export const Newsletter = () => {
                         ¡Genial! Te has suscrito correctamente a la Newsletter.
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '0.5rem', maxWidth: '500px', margin: '0 auto', flexWrap: 'wrap' }}>
-                        <input
-                            type="email"
-                            placeholder="Tu mejor dirección de correo"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            style={{
-                                flex: '1 1 200px',
-                                padding: '1rem 1.5rem',
-                                borderRadius: '0.5rem',
-                                border: '1px solid rgba(255,255,255,0.2)',
-                                background: 'rgba(0,0,0,0.4)',
-                                color: 'white',
-                                outline: 'none',
-                                transition: 'border-color 0.3s ease'
-                            }}
-                        />
-                        <button 
-                            type="submit" 
-                            className="btn btn-primary"
-                            disabled={status === 'loading'}
-                            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', flex: '0 0 auto' }}
-                        >
-                            {status === 'loading' ? 'Enviando...' : (
-                                <>Suscribirme <ArrowRight size={18} /></>
-                            )}
-                        </button>
+                    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '500px', margin: '0 auto' }}>
+                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', width: '100%' }}>
+                            <input
+                                type="email"
+                                placeholder="Tu mejor dirección de correo"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                style={{
+                                    flex: '1 1 200px',
+                                    padding: '1rem 1.5rem',
+                                    borderRadius: '0.5rem',
+                                    border: '1px solid rgba(255,255,255,0.2)',
+                                    background: 'rgba(0,0,0,0.4)',
+                                    color: 'white',
+                                    outline: 'none',
+                                    transition: 'border-color 0.3s ease'
+                                }}
+                            />
+                            <button 
+                                type="submit" 
+                                className="btn btn-primary"
+                                disabled={status === 'loading' || !privacyAccepted}
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    padding: '1rem 2rem',
+                                    flex: '0 0 auto',
+                                    opacity: (!privacyAccepted || status === 'loading') ? 0.5 : 1,
+                                    cursor: (privacyAccepted && status !== 'loading') ? 'pointer' : 'not-allowed'
+                                }}
+                            >
+                                {status === 'loading' ? 'Enviando...' : (
+                                    <>Suscribirme <ArrowRight size={18} /></>
+                                )}
+                            </button>
+                        </div>
+                        
+                        <div style={{ display: 'flex', gap: '0.5rem', textAlign: 'left', alignItems: 'flex-start' }}>
+                            <input
+                                type="checkbox"
+                                id="privacy-newsletter"
+                                required
+                                checked={privacyAccepted}
+                                onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                                style={{ marginTop: '0.2rem', cursor: 'pointer' }}
+                            />
+                            <label htmlFor="privacy-newsletter" style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', cursor: 'pointer' }}>
+                                Acepto la <Link to="/privacidad" style={{ color: 'var(--color-primary)' }}>Política de Privacidad</Link> y el envío de comunicaciones.
+                            </label>
+                        </div>
+
+                        {status === 'error' && (
+                            <p style={{ fontSize: '0.85rem', color: '#EF4444', textAlign: 'left', margin: '0' }}>
+                                Hubo un problema al procesar tu suscripción. Por favor, inténtalo de nuevo.
+                            </p>
+                        )}
                     </form>
                 )}
                 <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginTop: '1rem' }}>

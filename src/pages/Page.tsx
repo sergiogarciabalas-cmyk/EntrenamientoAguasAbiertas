@@ -103,13 +103,15 @@ export const Page = ({ fixedSlug }: { fixedSlug?: string }) => {
 
     useSEO({
         title: pageData ? `${he.decode(pageData.title || '')} | Sergi García` : 'Cargando...',
-        description: 'Página de información sobre servicios de natación y entrenamiento.'
+        description: pageData?.description || 'Página de información sobre servicios de natación y entrenamiento.',
+        canonical: slug ? `https://entrenamientoaguasabiertas.com/${slug}` : undefined
     });
 
     useEffect(() => {
         client.fetch(`
       *[_type == "page" && slug.current == $slug][0]{
         title,
+        description,
         content
       }
     `, { slug })

@@ -7,7 +7,8 @@ import { useSEO } from '../hooks/useSEO';
 export const Contact = () => {
     useSEO({
         title: 'Contacto y Asesoría | Sergi García',
-        description: 'Contacta conmigo para resolver tus dudas sobre los planes de entrenamiento en aguas abiertas, los clínics presenciales de natación o cualquier consulta.'
+        description: 'Contacta conmigo para resolver tus dudas sobre los planes de entrenamiento en aguas abiertas, los clínics presenciales de natación o cualquier consulta.',
+        canonical: 'https://entrenamientoaguasabiertas.com/contacto'
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);

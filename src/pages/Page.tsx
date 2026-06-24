@@ -30,11 +30,15 @@ const ptComponents: any = {
         },
         htmlBlock: ({ value }: any) => {
             if (!value?.html) return null;
+            let htmlContent = value.html;
+            if (htmlContent.includes('wp-image-2925') || htmlContent.includes('d4a87fc141d908000f0881e86ec703eb0fc0f354-1024x430')) {
+                htmlContent = `<img fetchpriority="high" decoding="async" src="/swimtific-calendar.png" class="attachment-large size-large" alt="Plan entrenamiento online y mixto - Swimtific" style="width: 100%; border-radius: 1rem; margin-top: 1rem; margin-bottom: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />`;
+            }
             return (
                 <div
                     className="wp-raw-html"
                     style={{ margin: '2rem 0', width: '100%', overflowX: 'auto' }}
-                    dangerouslySetInnerHTML={{ __html: value.html }}
+                    dangerouslySetInnerHTML={{ __html: htmlContent }}
                 />
             );
         }

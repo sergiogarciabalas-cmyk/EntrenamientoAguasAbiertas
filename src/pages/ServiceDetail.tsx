@@ -204,9 +204,11 @@ export const ServiceDetail = ({ fixedSlug }: { fixedSlug?: string }) => {
                             {service.description}
                         </p>
 
-                        <Link to="/contacto" className="btn btn-primary" style={{ marginTop: '2rem' }}>
-                            Contactar Ahora
-                        </Link>
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+                            <Link to="/contacto" className="btn btn-primary">
+                                Contactar Ahora
+                            </Link>
+                        </div>
                     </RevealOnScroll>
                 </div>
             </div>

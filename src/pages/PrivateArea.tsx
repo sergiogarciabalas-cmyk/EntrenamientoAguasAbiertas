@@ -45,7 +45,74 @@ export const PrivateArea = () => {
     };
 
     return (
-        <div style={{ paddingTop: '100px', minHeight: '80vh', paddingBottom: '100px' }}>
+        <div style={{ paddingTop: '160px', minHeight: '80vh', paddingBottom: '100px', position: 'relative' }}>
+            <style>{`
+                @keyframes marquee-ltr {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0); }
+                }
+                .marquee-wrapper {
+                    overflow: hidden;
+                    width: 100%;
+                    background: linear-gradient(90deg, rgba(0, 51, 102, 0.95), rgba(0, 136, 204, 0.95));
+                    backdrop-filter: blur(10px);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    z-index: 50;
+                    padding: 10px 0;
+                    cursor: pointer;
+                    display: flex;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                }
+                .marquee-track {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee-ltr 22s linear infinite;
+                }
+                .marquee-track:hover {
+                    animation-play-state: paused;
+                }
+                .marquee-text {
+                    font-size: 0.88rem;
+                    font-weight: 600;
+                    color: #fff;
+                    letter-spacing: 0.05em;
+                    display: flex;
+                    align-items: center;
+                    gap: 3rem;
+                    padding-right: 3rem;
+                    white-space: nowrap;
+                }
+                .clickable-card {
+                    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+                }
+                .clickable-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+                }
+            `}</style>
+            
+            <div 
+                className="marquee-wrapper" 
+                onClick={() => window.open('https://www.swimtific.com/', '_blank')}
+                title="Visitar Swimtific.com"
+            >
+                <div className="marquee-track">
+                    <div className="marquee-text">
+                        <span>🚀 ¡LANZAMIENTO OFICIAL DE SWIMTIFIC! La nueva plataforma para nadadores y entrenadores. ¡Date de alta hoy y crea tu plan gratis!</span>
+                        <span>🏊‍♂️ Conecta tus dispositivos (Garmin, Whoop, Polar, Oura, Strava) y analiza tu carga al instante.</span>
+                        <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
+                    </div>
+                    <div className="marquee-text">
+                        <span>🚀 ¡LANZAMIENTO OFICIAL DE SWIMTIFIC! La nueva plataforma para nadadores y entrenadores. ¡Date de alta hoy y crea tu plan gratis!</span>
+                        <span>🏊‍♂️ Conecta tus dispositivos (Garmin, Whoop, Polar, Oura, Strava) y analiza tu carga al instante.</span>
+                        <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
+                    </div>
+                </div>
+            </div>
+
             <div className="container">
                 <RevealOnScroll>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
@@ -62,16 +129,21 @@ export const PrivateArea = () => {
                     gap: '2rem'
                 }}>
 
-                    {/* App Swimtific - Estado Próximamente */}
+                    {/* App Swimtific - Clickable Redirect */}
                     <RevealOnScroll className="delay-1">
-                        <div className="service-card glass" style={{
-                            textAlign: 'center',
-                            alignItems: 'center',
-                            height: '100%',
-                            position: 'relative',
-                            display: 'flex',
-                            flexDirection: 'column'
-                        }}>
+                        <div 
+                            className="service-card glass clickable-card" 
+                            onClick={() => window.open('https://www.swimtific.com/', '_blank')}
+                            style={{
+                                textAlign: 'center',
+                                alignItems: 'center',
+                                height: '100%',
+                                position: 'relative',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                cursor: 'pointer'
+                            }}
+                        >
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
                                 <ExternalLink size={32} />
                             </div>
@@ -80,20 +152,23 @@ export const PrivateArea = () => {
 
                             <div style={{ marginTop: 'auto', width: '100%', paddingTop: '1.5rem' }}>
                                 <button
-                                    disabled
                                     style={{
                                         width: '100%',
                                         padding: '0.75rem',
                                         borderRadius: '0.5rem',
-                                        border: '1px solid rgba(56, 189, 248, 0.2)',
-                                        background: 'rgba(56, 189, 248, 0.05)',
-                                        color: 'rgba(255, 255, 255, 0.4)',
-                                        cursor: 'not-allowed',
+                                        border: '1px solid rgba(56, 189, 248, 0.4)',
+                                        background: 'rgba(56, 189, 248, 0.1)',
+                                        color: '#fff',
+                                        cursor: 'pointer',
                                         fontSize: '0.9rem',
-                                        fontWeight: '500'
+                                        fontWeight: '600',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.5rem'
                                     }}
                                 >
-                                    Disponible Próximamente
+                                    Acceder a la App <ExternalLink size={16} />
                                 </button>
                                 <p style={{
                                     fontSize: '0.75rem',
@@ -101,7 +176,7 @@ export const PrivateArea = () => {
                                     color: 'var(--color-primary)',
                                     fontStyle: 'italic'
                                 }}>
-                                    * Acceso prioritario para alumnos y suscriptores.
+                                    * Plataforma de análisis para entrenadores y atletas.
                                 </p>
                             </div>
                         </div>

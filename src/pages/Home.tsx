@@ -149,10 +149,13 @@ export const Home = () => {
                 }
             `}</style>
             
-            <div 
+            <a 
+                href="https://www.swimmtific.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="home-marquee-wrapper" 
-                onClick={() => window.open('https://www.swimmtific.com/', '_blank')}
                 title="Visitar Swimtific.com"
+                style={{ textDecoration: 'none', display: 'flex' }}
             >
                 <div className="home-marquee-track">
                     <div className="home-marquee-text">
@@ -166,7 +169,7 @@ export const Home = () => {
                         <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
             {/* HERO SECTION */}
             <section className="hero" id="inicio" style={{ minHeight: '90vh', position: 'relative', overflow: 'hidden', padding: 0, display: 'flex', alignItems: 'center' }}>

@@ -94,10 +94,13 @@ export const PrivateArea = () => {
                 }
             `}</style>
             
-            <div 
+            <a 
+                href="https://www.swimtific.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="marquee-wrapper" 
-                onClick={() => window.open('https://www.swimtific.com/', '_blank')}
                 title="Visitar Swimtific.com"
+                style={{ textDecoration: 'none', display: 'flex' }}
             >
                 <div className="marquee-track">
                     <div className="marquee-text">
@@ -111,7 +114,7 @@ export const PrivateArea = () => {
                         <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <div className="container">
                 <RevealOnScroll>
@@ -131,9 +134,11 @@ export const PrivateArea = () => {
 
                     {/* App Swimtific - Clickable Redirect */}
                     <RevealOnScroll className="delay-1">
-                        <div 
+                        <a 
+                            href="https://www.swimtific.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="service-card glass clickable-card" 
-                            onClick={() => window.open('https://www.swimtific.com/', '_blank')}
                             style={{
                                 textAlign: 'center',
                                 alignItems: 'center',
@@ -141,7 +146,9 @@ export const PrivateArea = () => {
                                 position: 'relative',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                textDecoration: 'none',
+                                color: 'inherit'
                             }}
                         >
                             <div className="service-icon" style={{ margin: '0 auto 1rem' }}>
@@ -151,7 +158,7 @@ export const PrivateArea = () => {
                             <p>La nueva plataforma avanzada para el análisis de tus entrenamientos de natación y técnica.</p>
 
                             <div style={{ marginTop: 'auto', width: '100%', paddingTop: '1.5rem' }}>
-                                <button
+                                <div
                                     style={{
                                         width: '100%',
                                         padding: '0.75rem',
@@ -159,7 +166,6 @@ export const PrivateArea = () => {
                                         border: '1px solid rgba(56, 189, 248, 0.4)',
                                         background: 'rgba(56, 189, 248, 0.1)',
                                         color: '#fff',
-                                        cursor: 'pointer',
                                         fontSize: '0.9rem',
                                         fontWeight: '600',
                                         display: 'flex',
@@ -169,7 +175,7 @@ export const PrivateArea = () => {
                                     }}
                                 >
                                     Acceder a la App <ExternalLink size={16} />
-                                </button>
+                                </div>
                                 <p style={{
                                     fontSize: '0.75rem',
                                     marginTop: '0.75rem',
@@ -179,7 +185,7 @@ export const PrivateArea = () => {
                                     * Plataforma de análisis para entrenadores y atletas.
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     </RevealOnScroll>
 
                     {/* Newsletter Exclusiva */}

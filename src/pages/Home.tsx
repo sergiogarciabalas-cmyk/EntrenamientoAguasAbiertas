@@ -122,7 +122,7 @@ export const Home = () => {
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                     position: relative;
                     margin-top: 85px; /* Limpiar el navbar fixed */
-                    z-index: 10;
+                    z-index: 9999;
                     padding: 8px 0;
                     cursor: pointer;
                     display: flex;

@@ -150,7 +150,7 @@ export const Home = () => {
             `}</style>
             
             <a 
-                href="https://www.swimmtific.com/"
+                href="https://www.swimtific.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="home-marquee-wrapper" 

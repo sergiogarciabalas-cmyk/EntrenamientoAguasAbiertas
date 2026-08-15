@@ -109,6 +109,65 @@ export const Home = () => {
 
     return (
         <>
+            <style>{`
+                @keyframes marquee-ltr {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0); }
+                }
+                .home-marquee-wrapper {
+                    overflow: hidden;
+                    width: 100%;
+                    background: linear-gradient(90deg, rgba(0, 51, 102, 0.95), rgba(0, 136, 204, 0.95));
+                    backdrop-filter: blur(10px);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    position: relative;
+                    margin-top: 85px; /* Limpiar el navbar fixed */
+                    z-index: 10;
+                    padding: 8px 0;
+                    cursor: pointer;
+                    display: flex;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                }
+                .home-marquee-track {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee-ltr 22s linear infinite;
+                }
+                .home-marquee-track:hover {
+                    animation-play-state: paused;
+                }
+                .home-marquee-text {
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #fff;
+                    letter-spacing: 0.05em;
+                    display: flex;
+                    align-items: center;
+                    gap: 3rem;
+                    padding-right: 3rem;
+                    white-space: nowrap;
+                }
+            `}</style>
+            
+            <div 
+                className="home-marquee-wrapper" 
+                onClick={() => window.open('https://www.swimmtific.com/', '_blank')}
+                title="Visitar Swimtific.com"
+            >
+                <div className="home-marquee-track">
+                    <div className="home-marquee-text">
+                        <span>🚀 ¡LANZAMIENTO OFICIAL DE SWIMTIFIC! La nueva plataforma para nadadores y entrenadores. ¡Date de alta hoy y crea tu plan gratis!</span>
+                        <span>🏊‍♂️ Conecta tus dispositivos (Garmin, Whoop, Polar, Oura, Strava) y analiza tu carga al instante.</span>
+                        <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
+                    </div>
+                    <div className="home-marquee-text">
+                        <span>🚀 ¡LANZAMIENTO OFICIAL DE SWIMTIFIC! La nueva plataforma para nadadores y entrenadores. ¡Date de alta hoy y crea tu plan gratis!</span>
+                        <span>🏊‍♂️ Conecta tus dispositivos (Garmin, Whoop, Polar, Oura, Strava) y analiza tu carga al instante.</span>
+                        <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
+                    </div>
+                </div>
+            </div>
+
             {/* HERO SECTION */}
             <section className="hero" id="inicio" style={{ minHeight: '90vh', position: 'relative', overflow: 'hidden', padding: 0, display: 'flex', alignItems: 'center' }}>
                 {heroImages.map((src, index) => (

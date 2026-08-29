@@ -138,12 +138,13 @@ a {
 }
 
 /* Navbar */
-.navbar {
+.navbar,
+.navbar-premium-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 10000;
   padding: 1.5rem 0;
   transition: var(--transition);
 }
@@ -208,8 +209,41 @@ a {
   display: block !important;
 }
 
-.dropdown-content a:hover {
+.dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: transparent;
+}
+
+.dropdown-item {
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
   color: var(--color-primary) !important;
+  transform: translateX(4px);
+}
+
+.dropdown-item-highlight {
+  transition: all 0.2s ease;
+}
+
+.dropdown-item-highlight:hover {
+  background: rgba(0, 242, 254, 0.15) !important;
+  border-color: rgba(0, 242, 254, 0.4) !important;
+  transform: translateX(4px);
+}
+
+.hero-announcement-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 242, 254, 0.75) !important;
+  box-shadow: 0 12px 30px rgba(0, 242, 254, 0.35) !important;
+  background: rgba(15, 23, 42, 0.92) !important;
 }
 
 /* React Markdown Custom Containers */

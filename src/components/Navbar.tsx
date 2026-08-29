@@ -21,8 +21,23 @@ export const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownTimeoutRef = useState<{ timer: any }>({ timer: null })[0];
+
+    const handleMouseEnter = () => {
+        if (dropdownTimeoutRef.timer) clearTimeout(dropdownTimeoutRef.timer);
+        setDropdownOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        dropdownTimeoutRef.timer = setTimeout(() => {
+            setDropdownOpen(false);
+        }, 250);
+    };
+
     useEffect(() => {
         setMobileMenuOpen(false);
+        setDropdownOpen(false);
     }, [location.pathname]);
 
     return (
@@ -46,22 +61,67 @@ export const Navbar = () => {
                     <div className={`nav-links ${mobileMenuOpen ? 'mobile-active' : ''}`} style={mobileMenuOpen ? { display: 'flex', position: 'absolute', top: '100%', left: '1rem', right: '1rem', background: 'rgba(15, 23, 42, 0.98)', padding: '2rem', borderRadius: '20px', flexDirection: 'column', border: '1px solid rgba(255, 255, 255, 0.08)', gap: '1.5rem', boxShadow: '0 20px 45px rgba(0,0,0,0.6)' } : {}}>
                         <Link to="/" className="nav-link" style={{ color: '#ffffff', fontWeight: 600 }}>Inicio</Link>
                         <Link to="/sobre-mi" className="nav-link">Sobre mí</Link>
-                        <div className="dropdown" style={{ position: 'relative', display: 'inline-block' }}>
-                            <Link to="/servicios" className="nav-link" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                        <div 
+                            className="dropdown" 
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            style={{ position: 'relative', display: 'inline-block' }}
+                        >
+                            <Link 
+                                to="/servicios" 
+                                className="nav-link" 
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                                onClick={() => setDropdownOpen(false)}
+                            >
                                 Servicios ▾
                             </Link>
-                            <div className="dropdown-content glass" style={{
-                                display: 'none', position: 'absolute', top: '100%', left: 0,
-                                minWidth: '220px', padding: '1rem', borderRadius: '0.5rem',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 100
-                            }}>
-                                <Link to="/servicios/plan-entrenamiento-online-o-mixto" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Plan Entrenamiento Online</Link>
-                                <Link to="/servicios/planes-entrenamiento-en-grupo" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Planes en Grupo</Link>
-                                <Link to="/servicios/clinics-presenciales" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Clínics Presenciales</Link>
-                                <Link to="/servicios/asesoramiento-entrenamiento" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Asesoramiento</Link>
-                                <Link to="/servicios/informe-tecnico-y-antropometria" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Informe Técnico y Antrop.</Link>
-                                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', margin: '0.5rem 0' }}></div>
-                                <a href="https://www.swimtific.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-primary)', fontWeight: 'bold', textDecoration: 'none' }}>App Swimtific 🚀</a>
+                            <div 
+                                className="dropdown-content glass" 
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                                style={{
+                                    display: dropdownOpen ? 'block' : 'none',
+                                    position: 'absolute',
+                                    top: 'calc(100% + 6px)',
+                                    left: 0,
+                                    minWidth: '240px',
+                                    padding: '0.75rem',
+                                    borderRadius: '0.75rem',
+                                    boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
+                                    zIndex: 1000,
+                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                    background: 'rgba(15, 23, 42, 0.96)',
+                                    backdropFilter: 'blur(16px)'
+                                }}
+                            >
+                                <Link to="/servicios/plan-entrenamiento-online-o-mixto" onClick={() => setDropdownOpen(false)} className="dropdown-item" style={{ display: 'block', padding: '0.55rem 0.75rem', color: 'var(--color-text)', textDecoration: 'none', borderRadius: '6px', fontSize: '0.9rem' }}>Plan Entrenamiento Online</Link>
+                                <Link to="/servicios/planes-entrenamiento-en-grupo" onClick={() => setDropdownOpen(false)} className="dropdown-item" style={{ display: 'block', padding: '0.55rem 0.75rem', color: 'var(--color-text)', textDecoration: 'none', borderRadius: '6px', fontSize: '0.9rem' }}>Planes en Grupo</Link>
+                                <Link to="/servicios/clinics-presenciales" onClick={() => setDropdownOpen(false)} className="dropdown-item" style={{ display: 'block', padding: '0.55rem 0.75rem', color: 'var(--color-text)', textDecoration: 'none', borderRadius: '6px', fontSize: '0.9rem' }}>Clínics Presenciales</Link>
+                                <Link to="/servicios/asesoramiento-entrenamiento" onClick={() => setDropdownOpen(false)} className="dropdown-item" style={{ display: 'block', padding: '0.55rem 0.75rem', color: 'var(--color-text)', textDecoration: 'none', borderRadius: '6px', fontSize: '0.9rem' }}>Asesoramiento</Link>
+                                <Link to="/servicios/informe-tecnico-y-antropometria" onClick={() => setDropdownOpen(false)} className="dropdown-item" style={{ display: 'block', padding: '0.55rem 0.75rem', color: 'var(--color-text)', textDecoration: 'none', borderRadius: '6px', fontSize: '0.9rem' }}>Informe Técnico y Antrop.</Link>
+                                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', margin: '0.4rem 0' }}></div>
+                                <a 
+                                    href="https://www.swimmtific.com/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    onClick={() => setDropdownOpen(false)}
+                                    className="dropdown-item-highlight"
+                                    style={{ 
+                                        display: 'flex', 
+                                        alignItems: 'center', 
+                                        justifyContent: 'space-between',
+                                        padding: '0.55rem 0.75rem', 
+                                        color: '#00f2fe', 
+                                        fontWeight: 'bold', 
+                                        textDecoration: 'none',
+                                        background: 'rgba(0, 242, 254, 0.08)',
+                                        border: '1px solid rgba(0, 242, 254, 0.2)',
+                                        borderRadius: '6px',
+                                        fontSize: '0.9rem'
+                                    }}
+                                >
+                                    <span>App Swimtific</span> <span>🚀</span>
+                                </a>
                             </div>
                         </div>
                         <Link to="/blog" className="nav-link">Blog</Link>

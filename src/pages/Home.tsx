@@ -103,76 +103,13 @@ export const Home = () => {
     // Achievements map for testimonials
     const achievementsMap: Record<string, string> = {
         'Pere Dalmau': '🏅 Cruces y Travesías de 30 km',
-        'Guillem Pujol': '🏆 Campeón de España (10 km)',
         'César Palomeque': '🏊 Finisher Batalla de Rande (27 km)'
     };
 
     return (
         <>
-            <style>{`
-                @keyframes marquee-ltr {
-                    0% { transform: translateX(-50%); }
-                    100% { transform: translateX(0); }
-                }
-                .home-marquee-wrapper {
-                    overflow: hidden;
-                    width: 100%;
-                    background: linear-gradient(90deg, rgba(0, 51, 102, 0.95), rgba(0, 136, 204, 0.95));
-                    backdrop-filter: blur(10px);
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                    position: relative;
-                    margin-top: 85px; /* Limpiar el navbar fixed */
-                    z-index: 9999;
-                    padding: 8px 0;
-                    cursor: pointer;
-                    display: flex;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                }
-                .home-marquee-track {
-                    display: flex;
-                    width: max-content;
-                    animation: marquee-ltr 22s linear infinite;
-                }
-                .home-marquee-track:hover {
-                    animation-play-state: paused;
-                }
-                .home-marquee-text {
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    color: #fff;
-                    letter-spacing: 0.05em;
-                    display: flex;
-                    align-items: center;
-                    gap: 3rem;
-                    padding-right: 3rem;
-                    white-space: nowrap;
-                }
-            `}</style>
-            
-            <a 
-                href="https://www.swimtific.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home-marquee-wrapper" 
-                title="Visitar Swimtific.com"
-                style={{ textDecoration: 'none', display: 'flex' }}
-            >
-                <div className="home-marquee-track">
-                    <div className="home-marquee-text">
-                        <span>🚀 ¡LANZAMIENTO OFICIAL DE SWIMTIFIC! La nueva plataforma para nadadores y entrenadores. ¡Date de alta hoy y crea tu plan gratis!</span>
-                        <span>🏊‍♂️ Conecta tus dispositivos (Garmin, Whoop, Polar, Oura, Strava) y analiza tu carga al instante.</span>
-                        <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
-                    </div>
-                    <div className="home-marquee-text">
-                        <span>🚀 ¡LANZAMIENTO OFICIAL DE SWIMTIFIC! La nueva plataforma para nadadores y entrenadores. ¡Date de alta hoy y crea tu plan gratis!</span>
-                        <span>🏊‍♂️ Conecta tus dispositivos (Garmin, Whoop, Polar, Oura, Strava) y analiza tu carga al instante.</span>
-                        <span>⚡ Registra tu cuenta en menos de 1 minuto y empieza tu prueba gratuita de 14 días.</span>
-                    </div>
-                </div>
-            </a>
-
             {/* HERO SECTION */}
-            <section className="hero" id="inicio" style={{ minHeight: '90vh', position: 'relative', overflow: 'hidden', padding: 0, display: 'flex', alignItems: 'center' }}>
+            <section className="hero" id="inicio" style={{ minHeight: '92vh', position: 'relative', overflow: 'hidden', padding: 0, display: 'flex', alignItems: 'center' }}>
                 {heroImages.map((src, index) => (
                     <div
                         key={src}
@@ -204,11 +141,48 @@ export const Home = () => {
                     }}
                 ></div>
                 
-                <div className="container hero-grid" style={{ zIndex: 2, position: 'relative', gridTemplateColumns: '1fr', textAlign: 'center', margin: '0 auto', maxWidth: '800px', padding: '6rem 2rem 2rem' }}>
+                <div className="container hero-grid" style={{ zIndex: 2, position: 'relative', gridTemplateColumns: '1fr', textAlign: 'center', margin: '0 auto', maxWidth: '800px', padding: '8rem 2rem 3rem' }}>
                     <div className="hero-content">
-                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.25)', color: '#00f2fe', padding: '0.35rem 0.9rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '2rem' }} className="fade-in-up">
-                            <Star size={12} fill="#00f2fe" /> Alto Rendimiento
-                        </div>
+                        <a 
+                            href="https://www.swimmtific.com/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hero-announcement-badge fade-in-up"
+                            style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '0.65rem',
+                                background: 'rgba(15, 23, 42, 0.75)',
+                                border: '1px solid rgba(0, 242, 254, 0.35)',
+                                padding: '0.45rem 1.1rem',
+                                borderRadius: '9999px',
+                                color: '#ffffff',
+                                fontSize: '0.85rem',
+                                fontWeight: 600,
+                                textDecoration: 'none',
+                                marginBottom: '2rem',
+                                boxShadow: '0 8px 25px -5px rgba(0, 242, 254, 0.25)',
+                                backdropFilter: 'blur(16px)',
+                                transition: 'all 0.3s ease',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            <span style={{ 
+                                background: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)', 
+                                color: '#020617', 
+                                padding: '0.2rem 0.6rem', 
+                                borderRadius: '9999px', 
+                                fontSize: '0.7rem', 
+                                fontWeight: 800,
+                                letterSpacing: '0.05em'
+                            }}>
+                                NUEVO
+                            </span>
+                            <span style={{ color: '#e2e8f0' }}>
+                                🚀 App Swimtific · <strong>14 días de prueba gratis</strong>
+                            </span>
+                            <ArrowRight size={14} color="#00f2fe" style={{ marginLeft: '2px' }} />
+                        </a>
 
                         <h1 className="fade-in-up delay-1" style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.25rem)', lineHeight: '1.15', marginBottom: '1.5rem', textShadow: '0 4px 20px rgba(0,0,0,0.6)' }}>
                             Entrenamiento de Aguas Abiertas <br/><span className="text-gradient">y Natación</span>

@@ -60,6 +60,8 @@ export const Navbar = () => {
                                 <Link to="/servicios/clinics-presenciales" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Clínics Presenciales</Link>
                                 <Link to="/servicios/asesoramiento-entrenamiento" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Asesoramiento</Link>
                                 <Link to="/servicios/informe-tecnico-y-antropometria" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-text)', textDecoration: 'none' }}>Informe Técnico y Antrop.</Link>
+                                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', margin: '0.5rem 0' }}></div>
+                                <a href="https://www.swimtific.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '0.5rem 0', color: 'var(--color-primary)', fontWeight: 'bold', textDecoration: 'none' }}>App Swimtific 🚀</a>
                             </div>
                         </div>
                         <Link to="/blog" className="nav-link">Blog</Link>

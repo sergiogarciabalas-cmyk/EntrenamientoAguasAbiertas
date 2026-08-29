@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
     Waves, ArrowRight,
-    Users, MapPin, MessageCircle, Youtube, Star
+    Users, MapPin, MessageCircle, Youtube, Star, Activity
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { client } from '../sanity';
@@ -251,36 +251,53 @@ export const Home = () => {
 
                     <div className="services-grid">
                         {servicesData.length > 0 ? (
-                            servicesData.map((service: any, index: number) => {
-                                const renderIcon = () => {
-                                    if (service.icon === 'Users') return <Users size={28} />;
-                                    if (service.icon === 'MapPin') return <MapPin size={28} />;
-                                    return <MessageCircle size={28} />;
-                                };
-                                const getBadge = (title: string) => {
-                                    if (title.toLowerCase().includes('plan')) return 'ONLINE';
-                                    if (title.toLowerCase().includes('clínic')) return 'PRESENCIAL';
-                                    return 'INDIVIDUAL';
-                                };
+                            <>
+                                {servicesData.map((service: any, index: number) => {
+                                    const renderIcon = () => {
+                                        if (service.icon === 'Users') return <Users size={28} />;
+                                        if (service.icon === 'MapPin') return <MapPin size={28} />;
+                                        return <MessageCircle size={28} />;
+                                    };
+                                    const getBadge = (title: string) => {
+                                        if (title.toLowerCase().includes('plan')) return 'ONLINE';
+                                        if (title.toLowerCase().includes('clínic')) return 'PRESENCIAL';
+                                        return 'INDIVIDUAL';
+                                    };
 
-                                return (
-                                    <RevealOnScroll key={service._id || index} className={`delay-${(index % 3) + 1}`}>
-                                        <Link to={`/servicios/${service.slug?.current || service.slug || ''}`} className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                                                <div className="service-icon">{renderIcon()}</div>
-                                                <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#94a3b8', letterSpacing: '0.05em' }}>
-                                                    {getBadge(service.title)}
+                                    return (
+                                        <RevealOnScroll key={service._id || index} className={`delay-${(index % 3) + 1}`}>
+                                            <Link to={`/servicios/${service.slug?.current || service.slug || ''}`} className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                                    <div className="service-icon">{renderIcon()}</div>
+                                                    <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#94a3b8', letterSpacing: '0.05em' }}>
+                                                        {getBadge(service.title)}
+                                                    </span>
+                                                </div>
+                                                <h3>{service.title}</h3>
+                                                <p>{service.description}</p>
+                                                <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                                    {service.linkText || 'Saber más'} <ArrowRight size={16} />
                                                 </span>
-                                            </div>
-                                            <h3>{service.title}</h3>
-                                            <p>{service.description}</p>
-                                            <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
-                                                {service.linkText || 'Saber más'} <ArrowRight size={16} />
+                                            </Link>
+                                        </RevealOnScroll>
+                                    );
+                                })}
+                                <RevealOnScroll className="delay-1">
+                                    <a href="https://www.swimtific.com/" target="_blank" rel="noopener noreferrer" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                            <div className="service-icon"><Activity size={28} /></div>
+                                            <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.25)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#00f2fe', letterSpacing: '0.05em' }}>
+                                                PLATAFORMA
                                             </span>
-                                        </Link>
-                                    </RevealOnScroll>
-                                );
-                            })
+                                        </div>
+                                        <h3>Swimtific</h3>
+                                        <p>Nuestra plataforma avanzada de análisis de entrenamientos. Conecta tus dispositivos (Garmin, Polar, Strava) y analiza tu carga de entrenamiento.</p>
+                                        <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                            Probar 14 días gratis <ArrowRight size={16} />
+                                        </span>
+                                    </a>
+                                </RevealOnScroll>
+                            </>
                         ) : (
                             <>
                                 <RevealOnScroll className="delay-1">
@@ -329,6 +346,22 @@ export const Home = () => {
                                             Consultar dudas <ArrowRight size={16} />
                                         </span>
                                     </Link>
+                                </RevealOnScroll>
+
+                                <RevealOnScroll className="delay-4">
+                                    <a href="https://www.swimtific.com/" target="_blank" rel="noopener noreferrer" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                            <div className="service-icon"><Activity size={28} /></div>
+                                            <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.25)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#00f2fe', letterSpacing: '0.05em' }}>
+                                                PLATAFORMA
+                                            </span>
+                                        </div>
+                                        <h3>Swimtific</h3>
+                                        <p>Nuestra plataforma avanzada de análisis de entrenamientos. Conecta tus dispositivos (Garmin, Polar, Strava) y analiza tu carga de entrenamiento.</p>
+                                        <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: 'auto', fontWeight: 'bold', fontSize: '0.95rem' }}>
+                                            Probar 14 días gratis <ArrowRight size={16} />
+                                        </span>
+                                    </a>
                                 </RevealOnScroll>
                             </>
                         )}

@@ -101,10 +101,13 @@ export const Navbar = () => {
                                 <Link to="/servicios/informe-tecnico-y-antropometria" onClick={() => setDropdownOpen(false)} className="dropdown-item" style={{ display: 'block', padding: '0.55rem 0.75rem', color: 'var(--color-text)', textDecoration: 'none', borderRadius: '6px', fontSize: '0.9rem' }}>Informe Técnico y Antrop.</Link>
                                 <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', margin: '0.4rem 0' }}></div>
                                 <a 
-                                    href="https://www.swimmtific.com/" 
+                                    href="https://swimtific.com" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    onClick={() => setDropdownOpen(false)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setTimeout(() => setDropdownOpen(false), 200);
+                                    }}
                                     className="dropdown-item-highlight"
                                     style={{ 
                                         display: 'flex', 
@@ -117,7 +120,8 @@ export const Navbar = () => {
                                         background: 'rgba(0, 242, 254, 0.08)',
                                         border: '1px solid rgba(0, 242, 254, 0.2)',
                                         borderRadius: '6px',
-                                        fontSize: '0.9rem'
+                                        fontSize: '0.9rem',
+                                        cursor: 'pointer'
                                     }}
                                 >
                                     <span>App Swimtific</span> <span>🚀</span>

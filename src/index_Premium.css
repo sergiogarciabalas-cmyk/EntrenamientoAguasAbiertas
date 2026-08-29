@@ -132,6 +132,7 @@ body:has(.premium-theme) .navbar {
   z-index: 10000;
   padding: 1.5rem 0;
   transition: var(--transition);
+  pointer-events: none;
 }
 
 .premium-theme .navbar-premium-wrapper.scrolled {
@@ -159,6 +160,12 @@ body:has(.premium-theme) .navbar {
   width: 100%;
   transition: var(--transition);
   padding: 0 2rem;
+  pointer-events: auto;
+}
+
+.premium-theme .dropdown-content,
+.premium-theme .mobile-menu-btn {
+  pointer-events: auto;
 }
 
 /* Scroll progress indicator line */

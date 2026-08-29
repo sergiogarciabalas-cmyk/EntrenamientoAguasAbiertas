@@ -144,7 +144,7 @@ export const Home = () => {
                 <div className="container hero-grid" style={{ zIndex: 2, position: 'relative', gridTemplateColumns: '1fr', textAlign: 'center', margin: '0 auto', maxWidth: '800px', padding: '8rem 2rem 3rem' }}>
                     <div className="hero-content">
                         <a 
-                            href="https://www.swimmtific.com/" 
+                            href="https://swimtific.com" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="hero-announcement-badge fade-in-up"
@@ -257,7 +257,7 @@ export const Home = () => {
                                     );
                                 })}
                                 <RevealOnScroll className="delay-1">
-                                    <a href="https://www.swimtific.com/" target="_blank" rel="noopener noreferrer" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <a href="https://swimtific.com" target="_blank" rel="noopener noreferrer" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                             <div className="service-icon"><Activity size={28} /></div>
                                             <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.25)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#00f2fe', letterSpacing: '0.05em' }}>
@@ -323,7 +323,7 @@ export const Home = () => {
                                 </RevealOnScroll>
 
                                 <RevealOnScroll className="delay-4">
-                                    <a href="https://www.swimtific.com/" target="_blank" rel="noopener noreferrer" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <a href="https://swimtific.com" target="_blank" rel="noopener noreferrer" className="service-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                             <div className="service-icon"><Activity size={28} /></div>
                                             <span style={{ fontSize: '0.7rem', fontWeight: 800, background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.25)', padding: '0.2rem 0.6rem', borderRadius: '6px', color: '#00f2fe', letterSpacing: '0.05em' }}>

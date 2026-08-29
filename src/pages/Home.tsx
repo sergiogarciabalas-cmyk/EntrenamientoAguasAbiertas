@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
     Waves, ArrowRight,
-    Users, MapPin, MessageCircle, Youtube, Star, Activity
+    Users, MapPin, MessageCircle, Youtube, Activity
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { client } from '../sanity';
